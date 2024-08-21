@@ -1,0 +1,63 @@
+:root {
+  /**
+   * colors
+   */
+
+  --middle-blue-green: hsl(176, 35%, 63%);
+  --sonic-silver: hsl(0, 0%, 44%);
+  --eerie-black: hsl(0, 0%, 9%);
+  --ocean-green: hsl(148, 45%, 58%);
+  --candy-pink: hsl(356, 65%, 63%);
+  --cultured: hsl(0, 0%, 96%);
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+}
+
+.container {
+  max-width: 550px;
+  margin-inline: auto;
+}
+
+button {
+  background: none;
+  border: none;
+  font: inherit;
+}
+
+button {
+  text-align: left;
+  cursor: pointer;
+}
+
+ion-icon {
+  margin-inline: auto;
+  font-size: 22px;
+  margin-bottom: 3px;
+}
+
+@media (min-width: 480px) {
+  .container {
+    max-width: 1150px;
+  }
+}
+@media (min-width: 580px) {
+  .container {
+    max-width: 550px;
+    margin-inline: auto;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 700px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 950px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1150px;
+  }
+}
