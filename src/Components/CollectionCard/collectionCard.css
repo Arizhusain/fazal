@@ -1,0 +1,9 @@
+.card-container {
+    /* padding: 2rem; */
+    border-radius: 1rem;
+    background-color: rgb(192, 192, 192);
+}
+
+.card-container img{
+    border-radius: 1rem 1rem;
+}
