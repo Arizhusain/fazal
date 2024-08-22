@@ -4,16 +4,13 @@ import "./collectionCard.css";
 const CollectionCard = () => {
   return (
     <>
-      <div>
-        <div className="card-container">
-          <div className="card-image">
-            <img src="https://picsum.photos/200/300" />
-          </div>
-          <div className="card-content">
-            <a href="#">Explore All</a>
-          </div>
-        </div>
-      </div>
+      <li className="card-list-item">
+        <img src="https://cdn-media.powerlook.in/catalog/category/festive.jpg?aio=w-256" alt="" class="collection-card" />
+        <a href="#" class="btn">
+          <span>Explore All</span>
+          <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+        </a>
+      </li>
     </>
   );
 };

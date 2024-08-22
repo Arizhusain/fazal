@@ -1,22 +1,17 @@
 import React from "react";
 import "./cardWrapper.css";
 import CollectionCard from "../CollectionCard/CollectionCard";
+import HeaderContent from "../HeaderContent/HeaderContent";
 
 const CardWrapper = () => {
   return (
     <div>
       <section className="container">
-        <h1>Explore Products</h1>
+        <HeaderContent />
         <ul className="card-collection">
-          <li>
-            <CollectionCard />
-          </li>
-          <li>
-            <CollectionCard />
-          </li>
-          <li>
-            <CollectionCard />
-          </li>
+          <CollectionCard />
+          <CollectionCard />
+          <CollectionCard />
         </ul>
       </section>
     </div>

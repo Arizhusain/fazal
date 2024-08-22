@@ -22,11 +22,12 @@ button {
   background: none;
   border: none;
   font: inherit;
-}
-
-button {
   text-align: left;
   cursor: pointer;
+}
+
+li {
+  list-style: none;
 }
 
 ion-icon {

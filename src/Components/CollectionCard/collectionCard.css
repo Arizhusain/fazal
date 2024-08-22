@@ -4,6 +4,38 @@
     background-color: rgb(192, 192, 192);
 }
 
-.card-container img{
-    border-radius: 1rem 1rem;
+.card-list-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.collection-card {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 350px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-bottom: 25px;
+    border-radius: 1rem;
+}
+
+.btn {
+    background: transparent;
+    color: #000;
+    font-size: var(--fs-5);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 14px 25px;
+    border: 1px solid black;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: #d63242;
+    color: white;
 }

@@ -1,0 +1,25 @@
+.header-line-wrapper {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.header-line {
+    color: #252931;
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: -.63px;
+    line-height: 24px;
+    margin: 0;
+    text-align: center;
+}
+
+.border-line {
+    height: 3px;
+    background-color: #d63242;
+    margin: 18px auto 0;
+    width: 36px;
+}
