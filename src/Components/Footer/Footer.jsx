@@ -56,7 +56,7 @@ const Footer = () => {
                                     <ion-icon name="location"></ion-icon>
 
                                     <span class="footer-link-text">
-                                        2751 S Parker Rd, Aurora, CO 80014, United States
+                                        2751 S Parker Rd, Aurora, KA 580001, INDIA
                                     </span>
                                 </address>
                             </li>
@@ -65,7 +65,7 @@ const Footer = () => {
                                 <a href="tel:+557343673257" class="footer-link">
                                     <ion-icon name="call"></ion-icon>
 
-                                    <span class="footer-link-text">+557343673257</span>
+                                    <span class="footer-link-text">+91-9876543210</span>
                                 </a>
                             </li>
 
@@ -73,7 +73,7 @@ const Footer = () => {
                                 <a href="mailto:footcap@help.com" class="footer-link">
                                     <ion-icon name="mail"></ion-icon>
 
-                                    <span class="footer-link-text">footcap@help.com</span>
+                                    <span class="footer-link-text">fazal@help.com</span>
                                 </a>
                             </li>
 
