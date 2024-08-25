@@ -1,65 +1,47 @@
-import React from "react";
-import "./header.css";
+import React from 'react';
+import './header.css';
 
 const Header = () => {
-  return (
-    <header className="header">
-      <section className="header-container">
-        <div className="header-wrapper">
-          <div className="company-logo">
-            <h1 className="logo-name">Fazal-Kart</h1>
-          </div>
-          <nav className="nav">
-            <ul className="nav-list">
-              <li className="nav-list-item">
-                <a href="#">New Arrivals</a>
-              </li>
-              <span>|</span>
-              <li className="nav-list-item">
-                <a href="#">Shirts</a>
-              </li>
-              <span>|</span>
-              <li className="nav-list-item">
-                <a href="#">T-shirts</a>
-              </li>
-              <span>|</span>
-              <li className="nav-list-item">
-                <a href="#">Track order</a>
-              </li>
-            </ul>
-          </nav>
-          <div className="action-container">
-            <div class="header-search">
-              <input
-                type="search"
-                name="search"
-                placeholder="Search Product..."
-                class="input-field"
-              />
+    return (
+        <header>
+            <section className='header-wrapper'>
+                <nav className='navbar'>
+                    <a className='logo' href="#1">F A Z A L</a>
+                    <ul className='nav-list'>
+                        <li className='nav-item active'>New Arrivals</li>
+                        <li className='nav-item'>Shirts</li>
+                        <li className='nav-item'>T-Shirts</li>
+                        <li className='nav-item'>Track order</li>
+                    </ul>
+                    <ul class="nav-action-list">
+                        <li>
+                            <button class="nav-action-btn">
+                                <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
+                            </button>
+                        </li>
+                        <li>
+                            <a href="#1" class="nav-action-btn">
+                                <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+                            </a>
+                        </li>
+                        <li>
+                            <button class="nav-action-btn">
+                                <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                                <data class="nav-action-badge" value="5" aria-hidden="true">5</data>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="nav-action-btn">
+                                <ion-icon name="bag-outline" aria-hidden="true"></ion-icon>
+                                <data class="nav-action-badge" value="4" aria-hidden="true">4</data>
+                            </button>
+                        </li>
 
-              <button class="search-btn" aria-label="Search">
-                <ion-icon name="search-outline"></ion-icon>
-              </button>
-            </div>
-            <div className="action-btn-container">
-              <button>
-                <ion-icon name="person-outline"></ion-icon>
-                <span>Sign-in</span>
-              </button>
-              <button>
-                <ion-icon name="cart-outline"></ion-icon>
-                <span>Cart</span>
-              </button>
-              <button>
-                <ion-icon name="heart-outline"></ion-icon>
-                <span>Wishlist</span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </header>
-  );
-};
+                    </ul>
+                </nav>
+            </section>
+        </header>
+    )
+}
 
-export default Header;
+export default Header

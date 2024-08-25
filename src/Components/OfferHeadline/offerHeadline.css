@@ -1,0 +1,42 @@
+.offer-headline-wrapper {
+    background-color: grey;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow-x: hidden;
+}
+
+.offer-headline-text-slider {
+    width: 100%;
+}
+
+.offer-headline-text {
+    position: relative;
+    overflow-x: hidden;
+    width: max-content;
+    margin: 0;
+    padding: .5rem;
+    color: white;
+    font-size: 1.5rem;
+    animation: text 30s linear infinite;
+}
+
+@keyframes text {
+    0% {
+        left: -30%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+.slider-close-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: grey;
+    z-index: 1;
+    color: white;
+}

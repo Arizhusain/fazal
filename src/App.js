@@ -1,14 +1,20 @@
 import "./App.css";
-import CardWrapper from "./Components/CardWrapper/CardWrapper";
+import Footer from "./Components/Footer/Footer";
 import Header from "./Components/Header/Header";
-import Hero from "./Components/Hero/Hero";
+import OfferHeadline from "./Components/OfferHeadline/OfferHeadline";
+import Home from "./Pages/Home";
 
 function App() {
   return (
     <>
+      <OfferHeadline />
       <Header />
-      <Hero />
-      <CardWrapper />
+      <main>
+        <article>
+          <Home />
+        </article>
+      </main>
+      <Footer />
     </>
   );
 }

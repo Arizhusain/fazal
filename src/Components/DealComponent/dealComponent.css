@@ -1,0 +1,9 @@
+.deal-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.deal-banner>img {
+    width: 80%;
+}

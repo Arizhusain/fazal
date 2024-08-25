@@ -1,0 +1,38 @@
+.new-trends {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.single-trend-wrapper {
+    width: 50%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    border-radius: 1rem;
+}
+
+.single-trend-wrapper>h2 {
+    font-family: cursive;
+    color: white;
+    font-size: 5rem;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+}
+
+.single-trend-wrapper>h3 {
+    font-family: cursive;
+    color: white;
+    font-size: 7rem;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+}

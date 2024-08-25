@@ -1,0 +1,30 @@
+.explore-product-category {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.single-category-wrapper {
+    border-radius: 2rem;
+    background-color: rgb(248, 248, 248);
+    margin: 1rem;
+    transition-duration: .15s;
+    transition-timing-function: ease-in-out;
+    cursor: pointer;
+}
+
+.single-category-wrapper:hover {
+    transform: scale(1.1);
+}
+
+.single-category-wrapper>img {
+    border-radius: 2rem 2rem 0 0;
+    max-width: 300px;
+}
+
+.single-category-wrapper>h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}

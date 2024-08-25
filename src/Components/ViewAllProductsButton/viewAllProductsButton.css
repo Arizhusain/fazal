@@ -1,0 +1,35 @@
+.button-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.view-all-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    height: 52px;
+    border: 2px solid #d63242;
+    border-radius: 2px;
+    padding: 0 32px;
+    vertical-align: middle;
+    color: #d63242;
+    font-size: 1.3rem;
+    letter-spacing: .75px;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    transition: background-color .2s ease, transform .5s ease;
+}
+
+.view-all-button:hover {
+    background-color: #d63242;
+    color: #fff;
+}
+
+.view-all-button:hover > ion-icon {
+    transition: .5s ease;
+    transform: translateX(4px);
+}
