@@ -1,6 +1,4 @@
-import React from 'react'
-import cta1 from '../../assets/images/cta-1.jpg'
-import cta2 from '../../assets/images/cta-2.jpg'
+import React from 'react';
 const Offers = () => {
     return (
         <section class="section cta">
@@ -14,7 +12,7 @@ const Offers = () => {
 
                             <h3 class="h2 card-title">The Summer Sale Off 50%</h3>
 
-                            <a href="#" class="btn btn-link">
+                            <a href="#1" class="btn btn-link">
                                 <span>Shop Now</span>
 
                                 <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
@@ -28,7 +26,7 @@ const Offers = () => {
 
                             <h3 class="h2 card-title">Give Yourself Best Look</h3>
 
-                            <a href="#" class="btn btn-link">
+                            <a href="#1" class="btn btn-link">
                                 <span>Shop Now</span>
 
                                 <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>

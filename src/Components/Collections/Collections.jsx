@@ -1,7 +1,4 @@
 import React from 'react'
-import c1 from '../../assets/images/collection-1.jpg'
-import c2 from '../../assets/images/collection-2.jpg'
-import c3 from '../../assets/images/collection-3.jpg'
 
 const Collections = () => {
     return (
@@ -14,7 +11,7 @@ const Collections = () => {
                         <div class="collection-card" style={{backgroundImage: `url(https://cdn.pixabay.com/photo/2024/04/29/04/21/tshirt-8726721_1280.jpg)`}}>
                             <h3 class="h4 card-title">Shirts</h3>
 
-                            <a href="#" class="btn btn-secondary">
+                            <a href="#1" class="btn btn-secondary">
                                 <span>Explore All</span>
 
                                 <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
@@ -26,7 +23,7 @@ const Collections = () => {
                         <div class="collection-card" style={{backgroundImage: `url(https://cdn.pixabay.com/photo/2024/04/29/04/21/neon-8726714_1280.jpg)`}}>
                             <h3 class="h4 card-title">T-Shirts</h3>
 
-                            <a href="#" class="btn btn-secondary">
+                            <a href="#1" class="btn btn-secondary">
                                 <span>Explore All</span>
 
                                 <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
@@ -38,7 +35,7 @@ const Collections = () => {
                         <div class="collection-card" style={{backgroundImage: `url(https://cdn.pixabay.com/photo/2024/04/29/04/21/tshirt-8726716_1280.jpg)`}}>
                             <h3 class="h4 card-title">Vests</h3>
 
-                            <a href="#" class="btn btn-secondary">
+                            <a href="#1" class="btn btn-secondary">
                                 <span>Explore All</span>
 
                                 <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>

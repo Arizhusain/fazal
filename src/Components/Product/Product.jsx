@@ -87,7 +87,7 @@ const Product = () => {
 
                                     <div class="card-content">
                                         <h3 class="h3 card-title">
-                                            <a href="#">Sky Blue and White Structured Striped Half Sleeves T Shirt</a>
+                                            <a href="#1">Sky Blue and White Structured Striped Half Sleeves T Shirt</a>
                                         </h3>
                                         <data class="card-price" value="180.85">$180.85</data>
 

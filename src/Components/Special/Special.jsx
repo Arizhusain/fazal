@@ -3,7 +3,6 @@ import card1 from '../../assets/images/product-1.jpg'
 import card2 from '../../assets/images/product-2.jpg'
 import card3 from '../../assets/images/product-3.jpg'
 import card4 from '../../assets/images/product-4.jpg'
-import ban1 from '../../assets/images/special-banner.jpg'
 
 const Special = () => {
     const productList = [card1, card2, card3, card4];
@@ -14,7 +13,7 @@ const Special = () => {
                 <div class="special-banner" style={{ backgroundImage: `url(https://grocered.in/blog/wp-content/uploads/2023/06/zara.webp)` }}>
                     <h2 class="h3 banner-title">New Trend Edition</h2>
 
-                    <a href="#" class="btn btn-link">
+                    <a href="#1" class="btn btn-link">
                         <span>Explore All</span>
 
                         <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
@@ -81,7 +80,7 @@ const Special = () => {
                                         <div class="card-content">
 
                                             <h3 class="h3 card-title">
-                                                <a href="#">ZARA Tshirts</a>
+                                                <a href="#1">ZARA Tshirts</a>
                                             </h3>
 
                                             <data class="card-price" value="180.85">$180.85</data>

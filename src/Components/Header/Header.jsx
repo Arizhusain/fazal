@@ -8,7 +8,7 @@ const Header = () => {
 
                 <div class="overlay" data-overlay></div>
 
-                <a href="#" class="logo">
+                <a href="#1" class="logo">
                     <h1 style={{ color: '#6b6b6b' }}>F A Z A L</h1>
                 </a>
 
@@ -22,34 +22,34 @@ const Header = () => {
                         <ion-icon name="close-outline"></ion-icon>
                     </button>
 
-                    <a href="#" class="logo">
+                    <a href="#1" class="logo">
                         <img src={logo} width="190" height="50" alt="Footcap logo" />
                     </a>
 
                     <ul class="navbar-list">
 
                         <li class="navbar-item">
-                            <a href="#" class="navbar-link">Home</a>
+                            <a href="#1" class="navbar-link">Home</a>
                         </li>
 
                         <li class="navbar-item">
-                            <a href="#" class="navbar-link">About</a>
+                            <a href="#1" class="navbar-link">About</a>
                         </li>
 
                         <li class="navbar-item">
-                            <a href="#" class="navbar-link">Products</a>
+                            <a href="#1" class="navbar-link">Products</a>
                         </li>
 
                         <li class="navbar-item">
-                            <a href="#" class="navbar-link">Shop</a>
+                            <a href="#1" class="navbar-link">Shop</a>
                         </li>
 
                         <li class="navbar-item">
-                            <a href="#" class="navbar-link">Blog</a>
+                            <a href="#1" class="navbar-link">Blog</a>
                         </li>
 
                         <li class="navbar-item">
-                            <a href="#" class="navbar-link">Contact</a>
+                            <a href="#1" class="navbar-link">Contact</a>
                         </li>
 
                     </ul>
@@ -65,7 +65,7 @@ const Header = () => {
                         </li>
 
                         <li>
-                            <a href="#" class="nav-action-btn">
+                            <a href="#1" class="nav-action-btn">
                                 <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
 
                                 <span class="nav-action-text">Login / Register</span>

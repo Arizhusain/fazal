@@ -1,5 +1,4 @@
 import React from 'react'
-import logo from '../../assets/images/logo.svg'
 
 const Footer = () => {
     return (
@@ -10,32 +9,32 @@ const Footer = () => {
 
                     <div class="footer-brand">
 
-                        <a href="#" class="logo">
+                        <a href="#1" class="logo">
                             <h1 style={{ color: '#6b6b6b' }}>F A Z A L</h1>
                         </a>
 
                         <ul class="social-list">
 
                             <li>
-                                <a href="#" class="social-link">
+                                <a href="#1" class="social-link">
                                     <ion-icon name="logo-facebook"></ion-icon>
                                 </a>
                             </li>
 
                             <li>
-                                <a href="#" class="social-link">
+                                <a href="#1" class="social-link">
                                     <ion-icon name="logo-twitter"></ion-icon>
                                 </a>
                             </li>
 
                             <li>
-                                <a href="#" class="social-link">
+                                <a href="#1" class="social-link">
                                     <ion-icon name="logo-pinterest"></ion-icon>
                                 </a>
                             </li>
 
                             <li>
-                                <a href="#" class="social-link">
+                                <a href="#1" class="social-link">
                                     <ion-icon name="logo-linkedin"></ion-icon>
                                 </a>
                             </li>
@@ -87,7 +86,7 @@ const Footer = () => {
                             </li>
 
                             <li>
-                                <a href="#" class="footer-link">
+                                <a href="#1" class="footer-link">
                                     <ion-icon name="chevron-forward-outline"></ion-icon>
 
                                     <span class="footer-link-text">My Account</span>
@@ -95,7 +94,7 @@ const Footer = () => {
                             </li>
 
                             <li>
-                                <a href="#" class="footer-link">
+                                <a href="#1" class="footer-link">
                                     <ion-icon name="chevron-forward-outline"></ion-icon>
 
                                     <span class="footer-link-text">View Cart</span>
@@ -103,7 +102,7 @@ const Footer = () => {
                             </li>
 
                             <li>
-                                <a href="#" class="footer-link">
+                                <a href="#1" class="footer-link">
                                     <ion-icon name="chevron-forward-outline"></ion-icon>
 
                                     <span class="footer-link-text">Wishlist</span>
@@ -111,7 +110,7 @@ const Footer = () => {
                             </li>
 
                             <li>
-                                <a href="#" class="footer-link">
+                                <a href="#1" class="footer-link">
                                     <ion-icon name="chevron-forward-outline"></ion-icon>
 
                                     <span class="footer-link-text">Compare</span>
@@ -119,7 +118,7 @@ const Footer = () => {
                             </li>
 
                             <li>
-                                <a href="#" class="footer-link">
+                                <a href="#1" class="footer-link">
                                     <ion-icon name="chevron-forward-outline"></ion-icon>
 
                                     <span class="footer-link-text">New Products</span>
@@ -196,7 +195,7 @@ const Footer = () => {
 
                     <p class="copyright">
                         &copy; 2024. All Rights Reserved.
-                        {/* <a href="#" class="copyright-link">FAZAL</a>. */}
+                        {/* <a href="#1" class="copyright-link">FAZAL</a>. */}
                         {/* All Rights Reserved */}
                     </p>
 
