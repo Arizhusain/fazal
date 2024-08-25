@@ -4,7 +4,7 @@ import "./header.css";
 const Header = () => {
   return (
     <header className="header">
-      <section className="container">
+      <section className="header-container">
         <div className="header-wrapper">
           <div className="company-logo">
             <h1 className="logo-name">Fazal-Kart</h1>
