@@ -36,3 +36,8 @@ export const trendsProductsData = [
 
 export const filterCtaButtons = ['All', 'pepe', 'puma', 'US polo', 'crododile', 'ZARA'];
 export const products = [];
+export const corosalImage = [
+    'https://cdn-media.powerlook.in/mycustomfolder/banner-11.jpg?aio=w-1200',
+    'https://cdn-media.powerlook.in/mycustomfolder/banner-26.jpg?aio=w-1200',
+    'https://cdn-media.powerlook.in/mycustomfolder/Time_Deal_Aug_2024.jpg?aio=w-640'
+];

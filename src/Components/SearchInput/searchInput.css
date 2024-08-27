@@ -1,0 +1,13 @@
+.search-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid grey;
+    border-radius: 1rem;
+    padding: .5rem 1rem;
+}
+
+.search-input {
+    border: none;
+    outline: none;
+}

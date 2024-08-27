@@ -1,4 +1,4 @@
-header{
+header {
     position: sticky;
     top: 0;
     background-color: #FEFEFE;
@@ -6,7 +6,8 @@ header{
 }
 
 .header-wrapper {
-    padding: 1rem 5rem;
+    padding: 2rem 5rem;
+    box-shadow: 1px 1px 10px 1px #cfcfcf;
 }
 
 .navbar {

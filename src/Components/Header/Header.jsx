@@ -1,5 +1,6 @@
 import React from 'react';
 import './header.css';
+import SearchInput from '../SearchInput/SearchInput'
 
 const Header = () => {
     return (
@@ -8,16 +9,15 @@ const Header = () => {
                 <nav className='navbar'>
                     <a className='logo' href="#1">F A Z A L</a>
                     <ul className='nav-list'>
-                        <li className='nav-item active'>New Arrivals</li>
-                        <li className='nav-item'>Shirts</li>
-                        <li className='nav-item'>T-Shirts</li>
-                        <li className='nav-item'>Track order</li>
+                        <li ><a href='#1' className='nav-item active'>Home</a></li>
+                        <li ><a href='#1' className='nav-item'>New Arrivals</a></li>
+                        <li ><a href='#1' className='nav-item'>Shirts</a></li>
+                        <li ><a href='#1' className='nav-item'>T-Shirts</a></li>
+                        <li ><a href='#1' className='nav-item'>Track order</a></li>
                     </ul>
                     <ul class="nav-action-list">
                         <li>
-                            <button class="nav-action-btn">
-                                <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
-                            </button>
+                            <SearchInput />
                         </li>
                         <li>
                             <a href="#1" class="nav-action-btn">
