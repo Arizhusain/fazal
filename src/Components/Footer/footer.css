@@ -1,0 +1,45 @@
+.footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.flex1 {
+    flex: 1;
+}
+
+.flex2 {
+    flex: 2;
+}
+
+.footer-headings {
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    margin: .5rem;
+}
+
+.flex1 h3 {
+    margin: .5rem;
+}
+
+.flex1 ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 50%;
+}
+
+.flex1 ul li {
+    font-size: 1.3rem;
+    margin: .5rem;
+}
+
+.flex1 ul li a:hover {
+    text-decoration: underline;
+    color: coral;
+}
+
+.flex1 p, .flex1 a {
+    font-size: 1.3rem;
+    margin: .5rem .5rem 2rem .5rem;
+}
