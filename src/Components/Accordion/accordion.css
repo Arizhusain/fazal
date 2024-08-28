@@ -1,0 +1,6 @@
+.siderbar-body-wrapper {
+    /* height: 0px; */
+    overflow: hidden;
+    transition: height 0.1s ease-in-out;
+    position: relative;
+}
