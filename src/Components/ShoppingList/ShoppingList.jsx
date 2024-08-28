@@ -1,6 +1,7 @@
 import React from 'react';
 import './shoppingList.css';
 import FiltersSidebar from '../FiltersSidebar/FiltersSidebar';
+import ProductCard from '../ProductCard/ProductCard';
 
 const ShoppingList = () => {
     return (
@@ -11,7 +12,18 @@ const ShoppingList = () => {
                         <div className='shopping-list-filter'>
                             <FiltersSidebar />
                         </div>
-                        <div className='shopping-list-products'>Products</div>
+                        <div className='shopping-list-products'>
+                            <ul class="product-list">
+                                <ProductCard />
+                                <ProductCard />
+                                <ProductCard />
+                                <ProductCard />
+                                <ProductCard />
+                                <ProductCard />
+                                <ProductCard />
+                                <ProductCard />
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </section>

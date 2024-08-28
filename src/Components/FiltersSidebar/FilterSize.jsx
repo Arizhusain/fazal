@@ -1,21 +1,14 @@
 import React from 'react'
 import CategoryHeading from '../CategoryHeading/CategoryHeading'
+import { sizes } from '../../demo'
 
 const FilterSize = () => {
-    const size = ['xxs',
-        'xs',
-        'xs-s',
-        's',
-        'm',
-        'm-l',
-        'l',
-        'xl']
     return (
         <div className='margin-bottom'>
             <CategoryHeading categoryHeading="Shop by size" />
             <div>
                 {
-                    size.map((item) => (
+                    sizes.map((item) => (
                         <div className='checkbox-wrapper'>
                             <div>
                                 <label class="checkbox-container">

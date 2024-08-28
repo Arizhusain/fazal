@@ -51,3 +51,16 @@ export const categoryList = [{
     categoryItems: ['Shirts', 'T-Shirts', 'Vests']
 }
 ];
+
+export const colors = [
+    '#E52B50', '#FFBF00', '#9966CC', '#8DB600', '#BE0032', '#FBCEB1', '#7FFFD4', '#007FFF'
+]
+
+export const sizes = ['xxs',
+    'xs',
+    'xss',
+    's',
+    'm',
+    'ml',
+    'l',
+    'xl']
