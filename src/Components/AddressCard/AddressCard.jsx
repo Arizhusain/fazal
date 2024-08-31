@@ -8,9 +8,10 @@ import PaymentComponent from '../PaymentComponent/PaymentComponent';
 const AddressCard = ({ enableCheckoutOption, handlePaymentOptionSelect }) => {
     const { data } = useContext(AppContext);
     const [showPopup, setShowPopup] = useState(false);
+    const [showSummaryAndPayment, setShowSummaryAndPayment] = useState(false);
 
     useEffect(() => {
-
+        console.log(data);
     }, [data])
 
     const handleOpen = (e) => {
@@ -24,7 +25,11 @@ const AddressCard = ({ enableCheckoutOption, handlePaymentOptionSelect }) => {
         setShowPopup(false);
     }
 
-    
+    const handleAddressChange = () => {
+        setShowSummaryAndPayment(true);
+    }
+
+
     return (
         <>
             <div className='addressCard-container'>
@@ -46,7 +51,7 @@ const AddressCard = ({ enableCheckoutOption, handlePaymentOptionSelect }) => {
                                 {
                                     data?.addressData?.map((item) => (
                                         <label className='addressCard-adrressSelection'>
-                                            <input type="radio" name="addressSelection" id="addressSelection" />
+                                            <input type="radio" name="addressSelection" id="addressSelection" onChange={handleAddressChange} />
                                             <div>
                                                 <h1>{item.firstName} {item.lastName}</h1>
                                                 <p>{item.address1} {item.address2} {item.city} {item.state}</p>
@@ -62,7 +67,7 @@ const AddressCard = ({ enableCheckoutOption, handlePaymentOptionSelect }) => {
                     }
                 </div>
             </div>
-            <div className='addressCard-container'>
+            {showSummaryAndPayment ? <><div className='addressCard-container'>
                 <div className='addressCard-wrapper'>
                     <div className='addressCard-header'>
                         <span>2</span>
@@ -75,17 +80,17 @@ const AddressCard = ({ enableCheckoutOption, handlePaymentOptionSelect }) => {
                     <OrderSummaryCard />
                 </div>
             </div>
-            <div className='addressCard-container'>
-                <div className='addressCard-wrapper'>
-                    <div className='addressCard-header'>
-                        <span>3</span>
-                        <h1>Payment</h1>
+                <div className='addressCard-container'>
+                    <div className='addressCard-wrapper'>
+                        <div className='addressCard-header'>
+                            <span>3</span>
+                            <h1>Payment</h1>
+                        </div>
                     </div>
-                </div>
-                <div className='addressCard-tail'>
-                    <PaymentComponent enableCheckoutOption={enableCheckoutOption} handlePaymentOptionSelect={handlePaymentOptionSelect} />
-                </div>
-            </div>
+                    <div className='addressCard-tail'>
+                        <PaymentComponent enableCheckoutOption={enableCheckoutOption} handlePaymentOptionSelect={handlePaymentOptionSelect} />
+                    </div>
+                </div></> : null}
         </>
     )
 }

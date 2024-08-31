@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './header.css';
 import SearchInput from '../SearchInput/SearchInput'
 import { Link, NavLink } from 'react-router-dom';
+import ClickAwayListener from '../ClickAwayListener/ClickAwayListener';
 
 const Header = () => {
+    const [popup, setPopup] = useState(false);
+    const handleProfilePopup = (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        setPopup(!popup);
+    }
     return (
         <header>
             <section className='header-wrapper'>
@@ -21,15 +28,24 @@ const Header = () => {
                             <SearchInput />
                         </li>
                         <li>
-                            <a href="#1" class="nav-action-btn">
+                            <button class="nav-action-btn" onClick={handleProfilePopup}>
                                 <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
-                            </a>
+                            </button>
+                            {popup ?
+                                <ClickAwayListener onClickAway={handleProfilePopup}>
+                                    <ul className='header-profile-action-container'>
+                                        <li><Link className='header-profile-action-link' to={'/profile'}>Profile</Link></li>
+                                        <li><Link className='header-profile-action-link' to={'/logout'}>Logout</Link></li>
+                                    </ul>
+                                </ClickAwayListener> : null}
                         </li>
                         <li>
-                            <button class="nav-action-btn">
-                                <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
-                                <data class="nav-action-badge" value="5" aria-hidden="true">5</data>
-                            </button>
+                            <Link to={'/wishlist'}>
+                                <button class="nav-action-btn">
+                                    <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                                    <data class="nav-action-badge" value="5" aria-hidden="true">5</data>
+                                </button>
+                            </Link>
                         </li>
                         <li>
                             <Link to={'/cart'}>

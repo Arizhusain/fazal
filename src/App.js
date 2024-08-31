@@ -10,6 +10,7 @@ import ProductListing from "./Pages/ProductListing";
 import SingleProductPage from "./Pages/SingleProductPage";
 import ErrorPage from "./Components/ErrorPage/ErrorPage";
 import ContextWrapper from "./Context/ContextWrapper";
+import OrderSuccessPage from "./Pages/OrderSuccessPage";
 
 const router = createBrowserRouter([
   {
@@ -55,6 +56,15 @@ const router = createBrowserRouter([
       <><OfferHeadline /><Header /><main>
         <article>
           <OrderPage />
+        </article>
+      </main><Footer /></>,
+  },
+  {
+    path: "ordersuccessfull",
+    element:
+      <><OfferHeadline /><Header /><main>
+        <article>
+          <OrderSuccessPage />
         </article>
       </main><Footer /></>,
   },

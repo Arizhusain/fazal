@@ -1,0 +1,33 @@
+.OrderSuccessComponent-container {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.OrderSuccessComponent-wrapper {
+    padding: 3rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.OrderSuccessComponent-wrapper>ion-icon {
+    height: 5rem;
+    width: 5rem;
+    color: green;
+}
+
+.OrderSuccessComponent-wrapper>p {
+    font-size: 1.5rem;
+}
+
+.OrderSuccessComponent-wrapper>h2 {
+    font-size: 2rem;
+    margin: 0;
+}
+.OrderSuccessComponent-wrapper>span {
+    font-size: 2rem;
+}
