@@ -1,6 +1,7 @@
 import React from 'react';
 import './header.css';
 import SearchInput from '../SearchInput/SearchInput'
+import { Link, NavLink } from 'react-router-dom';
 
 const Header = () => {
     return (
@@ -9,11 +10,11 @@ const Header = () => {
                 <nav className='navbar'>
                     <a className='logo' href="#1">F A Z A L</a>
                     <ul className='nav-list'>
-                        <li ><a href='#1' className='nav-item active'>Home</a></li>
-                        <li ><a href='#1' className='nav-item'>New Arrivals</a></li>
-                        <li ><a href='#1' className='nav-item'>Shirts</a></li>
-                        <li ><a href='#1' className='nav-item'>T-Shirts</a></li>
-                        <li ><a href='#1' className='nav-item'>Track order</a></li>
+                        <NavLink className='nav-item' to={'/'}>Home</NavLink>
+                        <NavLink className='nav-item' to={'/products'}>New Arrivals</NavLink>
+                        <Link className='nav-item' to={'/products'}>Shirts</Link>
+                        <Link className='nav-item' to={'/products'}>T-Shirts</Link>
+                        <Link className='nav-item' to={'/track-order'}>Track order</Link>
                     </ul>
                     <ul class="nav-action-list">
                         <li>
@@ -31,10 +32,12 @@ const Header = () => {
                             </button>
                         </li>
                         <li>
-                            <button class="nav-action-btn">
-                                <ion-icon name="bag-outline" aria-hidden="true"></ion-icon>
-                                <data class="nav-action-badge" value="4" aria-hidden="true">4</data>
-                            </button>
+                            <Link to={'/cart'}>
+                                <button class="nav-action-btn">
+                                    <ion-icon name="bag-outline" aria-hidden="true"></ion-icon>
+                                    <data class="nav-action-badge" value="4" aria-hidden="true">4</data>
+                                </button>
+                            </Link>
                         </li>
 
                     </ul>

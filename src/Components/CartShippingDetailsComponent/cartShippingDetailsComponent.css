@@ -1,0 +1,75 @@
+.CartShippingDetailsComponent-main-container{
+    border: 1px solid rgb(207, 207, 207);
+    margin: 2rem;
+    padding: 2rem;
+    border-radius: 10px;
+    position: sticky;
+    top: 10rem;
+}
+
+.CartShippingDetailsComponent-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.CartShippingDetailsComponent-list>span {
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding: 1rem;
+}
+
+.CartShippingDetailsComponent-coupon {
+    color: green;
+}
+
+.CartShippingDetailsComponent-list-coupon {
+    color: rgb(67, 105, 67);
+    margin: 1.5rem;
+    padding: 1rem;
+    border: 1px solid rgb(207, 207, 207);
+    width: 100%;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.CartShippingDetailsComponent-list-coupon:hover {
+    background-color: aliceblue;
+}
+
+.CartShippingDetailsComponent-list-coupon>span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.CartShippingDetailsComponent-subtotal {
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.CartShippingDetailsComponent-checkout-button {
+    border: 1px solid;
+    padding: 1rem;
+    margin: 1rem;
+    width: 100%;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.price-horizontal-line {
+    border: 0;
+    border-bottom: 1px solid rgb(207, 207, 207);
+}

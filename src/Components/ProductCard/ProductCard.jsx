@@ -1,11 +1,12 @@
 import React from 'react'
 import './productCard.css'
+import { Link } from 'react-router-dom'
 
 const ProductCard = () => {
   return (
     <>
       <li>
-        <a href="#1" className='product-card-wrapper'>
+        <Link className='product-card-wrapper' to={'/products/1'}>
           <div className='product-card'>
             <img className='product-image' src="https://cdn.pixabay.com/photo/2024/01/20/01/54/ai-generated-8520240_1280.jpg" alt="test" />
             <span className='new-button'>New</span>
@@ -14,7 +15,7 @@ const ProductCard = () => {
               <data class="card-price" value="190.85">$190.85</data>
             </div>
           </div>
-        </a>
+        </Link>
       </li>
     </>
   )

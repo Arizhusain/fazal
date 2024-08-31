@@ -1,0 +1,54 @@
+.addressCard-container {
+    box-shadow: 0 2px 17px -4px rgba(0, 0, 0, .11);
+    padding: 1rem;
+    margin: 1rem 0;
+    border: 1px solid #cdcdcd;
+    border-radius: 5px;
+}
+
+.addressCard-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.addressCard-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.addressCard-header>h1 {
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.addressCard-header>span {
+    height: 2rem;
+    width: 2rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.addressCard-wrapper>button {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: #bb4d4d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.addressCard-tail{
+    font-size: 1.4rem;
+    padding: 1rem 0;
+    border-top: 1px solid #cdcdcd;
+}

@@ -1,0 +1,13 @@
+.ShippingMessage-container {
+    border: 1px solid rgb(231, 231, 231);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ShippingMessage-container > h1 > span {
+    color: rgb(74, 201, 105);
+}
+.ShippingMessage-container > ion-icon {
+    color: rgb(184, 54, 54);
+}

@@ -1,0 +1,98 @@
+.CartCardComponent-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    border: 1px solid #ededed;
+    border-radius: 1rem;
+    margin: 1rem 0;
+}
+
+.CartCardComponent-content-wrapper {
+    width: 100%;
+}
+
+.CartCardComponent-image-wrapper>img {
+    width: 13rem;
+    height: 16rem;
+    object-fit: cover;
+}
+
+.CartCardComponent-content-container>div>h3 {
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin: .5rem 0;
+}
+
+.CartCardComponent-content-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.CartCardComponent-content-container>p {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.CartCardComponent-content-container>hr {
+    border: 1px solid #f5f5f5;
+    margin: 1rem 0;
+}
+
+.CartCardComponent-qty-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2rem;
+}
+
+.CartCardComponent-qty-wrapper>span {
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+
+.CartCardComponent-qty-wrapper>button {
+    height: 2.5rem;
+    width: 2.5rem;
+    border: 1px solid rgb(216, 216, 216);
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.CartCardComponent-qty-wrapper>button:hover {
+    background: rgb(216, 216, 216);
+}
+
+.CartCardComponent-footer-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5rem;
+}
+
+.CartCardComponent-footer-links>a {
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.CartCardComponent-footer-links>a:first-child {
+    color: #96999b;
+}
+
+.CartCardComponent-footer-links>a:first-child:hover {
+    color: black;
+}
+
+.CartCardComponent-footer-links>a:last-child {
+    color: rgb(187, 77, 77);
+}
+
+.CartCardComponent-footer-links>a:last-child:hover {
+    color: rgb(224, 98, 98);
+}

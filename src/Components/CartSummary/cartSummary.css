@@ -1,0 +1,11 @@
+.CartSummary-container {
+    display: flex;
+}
+
+.CartSummary-cart-items {
+    flex: 2;
+}
+
+.CartSummary-cart-price-details {
+    flex: 1;
+}

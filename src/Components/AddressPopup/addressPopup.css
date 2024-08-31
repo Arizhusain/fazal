@@ -1,0 +1,164 @@
+.addressPopup-container {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(212, 212, 212, 0.7);
+    top: 0;
+    left: 0;
+    z-index: 100;
+    overflow-y: scroll;
+}
+
+.addressPopup-wrapper {
+    width: 50rem;
+    background-color: white;
+    margin: 10rem auto;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.addressPopup-form-header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.addressPopup-form {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.addressPopup-form-header {
+    color: #252931;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 10px;
+}
+
+.addressPopup-form>input {
+    display: inline-block;
+    height: 3rem;
+    border: 1px solid #d7d9e1;
+    border-radius: 4px;
+    background-color: #fff;
+    padding: 0 1rem;
+    color: #1b2d3f;
+    font-size: 14px;
+    margin-bottom: 1.7rem;
+}
+
+.addressPopup-form>input:focus {
+    outline: none;
+}
+
+.addressPopup-form>label {
+    color: #8c8a8a;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .45px;
+    line-height: 14px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.addressPopup-form>textarea {
+    display: inline-block;
+    border: 1px solid #d7d9e1;
+    border-radius: 4px;
+    background-color: #fff;
+    padding: 12px;
+    color: #1b2d3f;
+    font-size: 14px;
+    margin-bottom: 1.8rem;
+    outline: none;
+}
+
+.addressPopup-form span {
+    color: #8c8a8a;
+    font-size: 13px;
+    line-height: 16px;
+}
+
+.mandatoryMark::after {
+    content: "*";
+    margin-left: 4px;
+    color: red;
+    font-size: 13px;
+}
+
+.addressPopup-action-radio-btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.addressPopup-action-radio-btn>label {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.addressPopup-action-radio-btn>label>input {
+    margin: 0 .5rem;
+}
+
+.addressPopup-action-radio-btn>label>span {
+    margin-right: 1rem;
+}
+
+.addressPopup-action-btn {
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.addressPopup-submit-btn {
+    display: inline-block;
+    height: 48px;
+    line-height: 48px;
+    border-radius: 4px;
+    background-color: #d63242;
+    color: #fff !important;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .73px;
+    padding: 0 24px;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    transition: all .4s ease;
+    border: none;
+}
+
+.addressPopup-cancel-btn {
+    display: inline-block;
+    height: 48px;
+    line-height: 46px;
+    border-radius: 2px;
+    border: 1px solid #e7e7e7;
+    background-color: #fff;
+    color: #d63242;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .53px;
+    padding: 0 30px;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    transition: all .4s ease;
+}
+
+.addressPopup-margin-bottom {
+    margin-bottom: 1.7rem;
+}
+
+input[type='radio'],
+input[type='checkbox'] {
+    accent-color: #d63242;
+}
