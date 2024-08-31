@@ -2,7 +2,7 @@ import React from 'react';
 import './cartShippingDetailsComponent.css'
 import { Link } from 'react-router-dom';
 
-const CartShippingDetailsComponent = () => {
+const CartShippingDetailsComponent = ({ cartHandling, enableCheckoutOption }) => {
     return (
         <>
             <div className='CartShippingDetailsComponent-main-container'>
@@ -40,10 +40,15 @@ const CartShippingDetailsComponent = () => {
                     <div className='CartShippingDetailsComponent-list'>
                         <span>UPI & Cards Accepted</span>
                     </div>
-                    <div className='CartShippingDetailsComponent-list'>
-                        <Link to={'/order'} className='CartShippingDetailsComponent-checkout-button'>
-                            CHECKOUT
-                        </Link>
+                    <div className={`CartShippingDetailsComponent-list ${!enableCheckoutOption ? 'not-allowed' : ''}`}>
+                        {cartHandling ?
+                            <Link to={'/order'} className='CartShippingDetailsComponent-checkout-button'>
+                                CHECKOUT
+                            </Link>
+                            :
+                            <Link to={'/ordersuccessfull'} className={`CartShippingDetailsComponent-checkout-button ${!enableCheckoutOption ? 'CartShippingDetailsComponent-checkout-button-disabled' : ''}`}>
+                                PLACE ORDER
+                            </Link>}
                     </div>
                 </div>
             </div >

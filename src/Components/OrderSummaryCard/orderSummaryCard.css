@@ -1,0 +1,17 @@
+.OrderSummaryCard-container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2rem;
+    padding: .5rem 0;
+}
+
+.OrderSummaryCard-container>img{
+    height: 6rem;
+    width: 6rem;
+    object-fit: cover;
+}
+
+.OrderSummaryCard-container>div>span{
+    font-weight: 500;
+}

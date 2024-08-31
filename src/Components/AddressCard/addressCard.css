@@ -47,8 +47,25 @@
     align-items: center;
     justify-content: center;
 }
-.addressCard-tail{
+
+.addressCard-tail {
     font-size: 1.4rem;
     padding: 1rem 0;
     border-top: 1px solid #cdcdcd;
+}
+
+.addressCard-adrressSelection {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+.addressCard-adrressSelection h1, .addressCard-adrressSelection p{
+    margin: 0;
+}
+
+.addressCard-adrressSelection h1 span{
+    font-weight: 400;
 }

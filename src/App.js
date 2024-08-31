@@ -9,6 +9,7 @@ import OrderPage from "./Pages/OrderPage";
 import ProductListing from "./Pages/ProductListing";
 import SingleProductPage from "./Pages/SingleProductPage";
 import ErrorPage from "./Components/ErrorPage/ErrorPage";
+import ContextWrapper from "./Context/ContextWrapper";
 
 const router = createBrowserRouter([
   {
@@ -62,7 +63,9 @@ const router = createBrowserRouter([
 function App() {
   return (
     <>
-      <RouterProvider router={router} />
+      <ContextWrapper>
+        <RouterProvider router={router} />
+      </ContextWrapper>
     </>
   );
 }
