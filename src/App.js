@@ -13,6 +13,7 @@ import ContextWrapper from "./Context/ContextWrapper";
 import OrderSuccessPage from "./Pages/OrderSuccessPage";
 import Dashboard from "./Pages/Dashboard";
 import DashboardContent from "./Components/DashboardContent/DashboardContentProfile";
+import OrderDetails from "./Pages/OrderDetails";
 
 const router = createBrowserRouter([
   {
@@ -84,7 +85,7 @@ const router = createBrowserRouter([
     element:
       <><OfferHeadline /><Header /><main>
         <article>
-        <Dashboard pageType="returns" />
+          <Dashboard pageType="returns" />
         </article>
       </main><Footer /></>,
   },
@@ -112,6 +113,15 @@ const router = createBrowserRouter([
       <><OfferHeadline /><Header /><main>
         <article>
           <Dashboard pageType="address" />
+        </article>
+      </main><Footer /></>,
+  },
+  {
+    path: "order-details/:id",
+    element:
+      <><OfferHeadline /><Header /><main>
+        <article>
+          <OrderDetails />
         </article>
       </main><Footer /></>,
   },
