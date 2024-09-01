@@ -1,0 +1,14 @@
+/* Dashboard page */
+
+.dashboard-container {
+    display: flex;
+    margin: 5rem 1rem;
+    align-items: flex-start;
+}
+
+
+
+/* Dashboard Content */
+.dashboard-wrapper-content {
+    flex: 3;
+}

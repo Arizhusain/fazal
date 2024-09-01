@@ -1,0 +1,27 @@
+.DashboardLinks-wrapper {
+    flex: 1;
+    margin-top: 5rem;
+}
+
+.DashboardLinks-list {
+    margin: 0;
+    padding: 0;
+}
+
+.DashboardLinks-list-items-links {
+    display: inline-block;
+    width: 100%;
+    padding: 10px 14px;
+    font-size: 14px;
+    color: #000;
+    box-sizing: border-box;
+    font-weight: 500;
+}
+
+.active {
+    color: rgb(187, 77, 77);
+}
+
+.DashboardLinks-list-items-links:hover {
+    color: rgb(187, 77, 77);
+}

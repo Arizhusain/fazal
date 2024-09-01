@@ -21,7 +21,7 @@ const Header = () => {
                         <NavLink className='nav-item' to={'/products'}>New Arrivals</NavLink>
                         <Link className='nav-item' to={'/products'}>Shirts</Link>
                         <Link className='nav-item' to={'/products'}>T-Shirts</Link>
-                        <Link className='nav-item' to={'/track-order'}>Track order</Link>
+                        <Link className='nav-item' to={'/myorders'}>Orders</Link>
                     </ul>
                     <ul class="nav-action-list">
                         <li>

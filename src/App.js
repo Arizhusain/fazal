@@ -11,6 +11,8 @@ import SingleProductPage from "./Pages/SingleProductPage";
 import ErrorPage from "./Components/ErrorPage/ErrorPage";
 import ContextWrapper from "./Context/ContextWrapper";
 import OrderSuccessPage from "./Pages/OrderSuccessPage";
+import Dashboard from "./Pages/Dashboard";
+import DashboardContent from "./Components/DashboardContent/DashboardContentProfile";
 
 const router = createBrowserRouter([
   {
@@ -65,6 +67,51 @@ const router = createBrowserRouter([
       <><OfferHeadline /><Header /><main>
         <article>
           <OrderSuccessPage />
+        </article>
+      </main><Footer /></>,
+  },
+  {
+    path: "profile",
+    element:
+      <><OfferHeadline /><Header /><main>
+        <article>
+          <Dashboard pageType="profile" />
+        </article>
+      </main><Footer /></>,
+  },
+  {
+    path: "returns",
+    element:
+      <><OfferHeadline /><Header /><main>
+        <article>
+        <Dashboard pageType="returns" />
+        </article>
+      </main><Footer /></>,
+  },
+  {
+    path: "myorders",
+    element:
+      <><OfferHeadline /><Header /><main>
+        <article>
+          <Dashboard pageType="myorders" />
+        </article>
+      </main><Footer /></>,
+  },
+  {
+    path: "wishlist",
+    element:
+      <><OfferHeadline /><Header /><main>
+        <article>
+          <Dashboard pageType="wishlist" />
+        </article>
+      </main><Footer /></>,
+  },
+  {
+    path: "address",
+    element:
+      <><OfferHeadline /><Header /><main>
+        <article>
+          <Dashboard pageType="address" />
         </article>
       </main><Footer /></>,
   },

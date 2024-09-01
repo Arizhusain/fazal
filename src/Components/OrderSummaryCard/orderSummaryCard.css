@@ -1,4 +1,4 @@
-.OrderSummaryCard-container{
+.OrderSummaryCard-container {
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -6,12 +6,23 @@
     padding: .5rem 0;
 }
 
-.OrderSummaryCard-container>img{
+.OrderSummaryCard-container>img {
     height: 6rem;
     width: 6rem;
     object-fit: cover;
 }
 
-.OrderSummaryCard-container>div>span{
+.OrderSummaryCard-container>div>p {
+    font-size: 1.2rem;
+}
+
+.OrderSummaryCard-container:hover {
+    color: #696969;
+}
+
+.OrderSummaryCard-container>div>span {
     font-weight: 500;
+    margin-right: 1rem;
+    color: black;
+    font-size: 1.2rem;
 }
