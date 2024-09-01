@@ -33,15 +33,15 @@ const OrderViewComponent = () => {
                             </div>
                             <div>
                                 <div>
-                                    <h2>Delivery Address</h2>
+                                    <h3>Delivery Address</h3>
                                     <div>
-                                        <h4>Arif Soudagar</h4>
+                                        <p>Arif Soudagar</p>
                                         <address>501 al barakha kollikeri dharwad, near charantimath garden, Dharwad, Karnataka 580001</address>
                                         <span>Contact: 7358236715</span>
                                     </div>
                                 </div>
                                 <div>
-                                    <h2>Payment Method</h2>
+                                    <h3>Payment Method</h3>
                                     <div>
                                         <p>Cash On Delivery</p>
                                     </div>
@@ -49,7 +49,7 @@ const OrderViewComponent = () => {
                             </div>
                         </div>
                         <div>
-                            <h2>Order Summary</h2>
+                            <h3>Order Summary</h3>
                             <div>
                                 <span>Total MRP</span>
                                 <span>₹2853.33</span>
