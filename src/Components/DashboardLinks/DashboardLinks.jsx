@@ -1,6 +1,6 @@
 import React from 'react';
 import './dashboardLinks.css';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const DashboardLinks = () => {
     return (

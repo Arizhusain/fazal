@@ -1,9 +1,9 @@
+/* eslint-disable no-undef */
 import React, { useEffect } from 'react';
 import './orderSuccessComponent.css'
 
 const OrderSuccessComponent = () => {
     useEffect(() => {
-        // eslint-disable-next-line no-undef
         confetti({
             particleCount: 100,
             spread: 70,
