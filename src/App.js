@@ -14,6 +14,7 @@ import OrderSuccessPage from "./Pages/OrderSuccessPage";
 import Dashboard from "./Pages/Dashboard";
 import DashboardContent from "./Components/DashboardContent/DashboardContentProfile";
 import OrderDetails from "./Pages/OrderDetails";
+import SignIn from "./Components/AuthComponent/SignIn";
 
 const router = createBrowserRouter([
   {
@@ -124,6 +125,17 @@ const router = createBrowserRouter([
           <OrderDetails />
         </article>
       </main><Footer /></>,
+  },
+  {
+    path: "login",
+    element:
+      <>
+        <main>
+          <article>
+            <SignIn />
+          </article>
+        </main>
+      </>,
   },
 ]);
 
