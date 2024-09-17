@@ -4,8 +4,8 @@ import SearchInput from '../SearchInput/SearchInput'
 import { Link, NavLink } from 'react-router-dom';
 import ClickAwayListener from '../ClickAwayListener/ClickAwayListener';
 import SignIn from '../AuthComponent/SignIn';
-import { useApp } from '../../Context/ContextWrapper';
 import NameComponent from '../AuthComponent/NameComponent';
+import { useApp } from '../../Context';
 
 const Header = () => {
     const user = useApp();

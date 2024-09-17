@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import './dashboardContent.css'
-import { useApp } from '../../Context/ContextWrapper';
 import { getUser } from '../../Server';
+import { useApp } from '../../Context';
 
 const DashboardContentProfile = () => {
     const [edit, setEdit] = useState(false);

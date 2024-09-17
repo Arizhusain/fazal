@@ -1,7 +1,8 @@
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 import './auth.css';
 import { Link } from 'react-router-dom';
-import { useApp } from '../../Context/ContextWrapper';
+import { useApp } from '../../Context';
 
 const SignIn = ({ handleClick, handleNameUpdate }) => {
     const user = useApp();
@@ -37,11 +38,11 @@ const SignIn = ({ handleClick, handleNameUpdate }) => {
         <>
             <div className='create-popup-screen' onClick={handleClick}>
                 <div className='containerAuth-wrapper'>
-                    <div class={`containerAuth activateLogin`} id="containerAuth" onClick={(e) => e.stopPropagation()}>
-                        <div class="form-containerAuth sign-up">
+                    <div className={`containerAuth activateLogin`} id="containerAuth" onClick={(e) => e.stopPropagation()}>
+                        <div className="form-containerAuth sign-up">
                             <form action="#">
                                 <h1>Login to your account</h1>
-                                <div class="social-icons">
+                                <div className="social-icons">
                                     <Link className='google-logo' onClick={() => user.appGoogleAuth()}>
                                         <img src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png" alt="google-icon" width={30} height={30} />
                                         <p>Sign-in with Google</p>
@@ -61,10 +62,10 @@ const SignIn = ({ handleClick, handleNameUpdate }) => {
                                 }
                             </form>
                         </div>
-                        <div class="toggle-containerAuth">
-                            <div class="toggle">
+                        <div className="toggle-containerAuth">
+                            <div className="toggle">
 
-                                <div class="toggle-panel toggle-left">
+                                <div className="toggle-panel toggle-left">
                                     <h1>Welcome!</h1>
                                     <p>Enter in-to your shopping world</p>
                                 </div>
@@ -76,5 +77,10 @@ const SignIn = ({ handleClick, handleNameUpdate }) => {
         </>
     )
 }
+
+SignIn.propTypes = {
+    handleClick: PropTypes.func,
+    handleNameUpdate: PropTypes.func,
+};
 
 export default SignIn

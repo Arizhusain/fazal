@@ -7,7 +7,7 @@ import DashboardContentWishlist from '../Components/DashboardContent/DashboardCo
 import DashboardContentReturns from '../Components/DashboardContent/DashboardContentReturns';
 import DashboardContentAddress from '../Components/DashboardContent/DashboardContentAddress';
 import DashboardLogin from '../Components/DashboardContent/DashboardLogin';
-import { useApp } from '../Context/ContextWrapper';
+import { useApp } from '../Context';
 
 const Dashboard = ({ pageType }) => {
     const user = useApp();
@@ -31,7 +31,7 @@ const Dashboard = ({ pageType }) => {
                     <div className='dashboard-container'>
                         <DashboardLinks />
                         <div className='dashboard-wrapper-content'>
-                            {user?.current ? Wrapper() : <DashboardLogin /> }
+                            {user?.current ? Wrapper() : <DashboardLogin />}
                         </div>
                     </div>
                 </section>

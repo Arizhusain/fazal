@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './auth.css';
-import { useApp } from '../../Context/ContextWrapper';
+import { useApp } from '../../Context';
 
 const NameComponent = ({ handleNameComponentClose }) => {
     const user = useApp();
