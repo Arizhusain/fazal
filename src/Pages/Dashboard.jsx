@@ -6,8 +6,11 @@ import DashboardContentOrder from '../Components/DashboardContent/DashboardConte
 import DashboardContentWishlist from '../Components/DashboardContent/DashboardContentWishlist';
 import DashboardContentReturns from '../Components/DashboardContent/DashboardContentReturns';
 import DashboardContentAddress from '../Components/DashboardContent/DashboardContentAddress';
+import DashboardLogin from '../Components/DashboardContent/DashboardLogin';
+import { useApp } from '../Context/ContextWrapper';
 
 const Dashboard = ({ pageType }) => {
+    const user = useApp();
     const Wrapper = () => {
         if (pageType === 'profile') {
             return <DashboardContentProfile />
@@ -28,7 +31,7 @@ const Dashboard = ({ pageType }) => {
                     <div className='dashboard-container'>
                         <DashboardLinks />
                         <div className='dashboard-wrapper-content'>
-                            {Wrapper()}
+                            {user?.current ? Wrapper() : <DashboardLogin /> }
                         </div>
                     </div>
                 </section>

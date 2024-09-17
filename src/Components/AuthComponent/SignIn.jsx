@@ -1,58 +1,79 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './auth.css';
 import { Link } from 'react-router-dom';
+import { useApp } from '../../Context/ContextWrapper';
 
-const SignIn = () => {
-    const [signToggle, setSignToggle] = useState(false);
+const SignIn = ({ handleClick, handleNameUpdate }) => {
+    const user = useApp();
+    const [otp, setOtp] = useState(true);
+    const [phoneNumber, setPhoneNumber] = useState(null);
+    const [invalidOtp, setInvalidOtp] = useState(false);
+    const [otpUserId, setOtpUserId] = useState(null);
+    const [otpText, setOtpText] = useState(null);
+
+    const handleChange = (e) => {
+        e?.preventDefault();
+        if (!otp) setOtp(true);
+        setPhoneNumber(e.target.value);
+        setInvalidOtp(false);
+    }
+    const handleOtpClick = async (e) => {
+        e?.preventDefault();
+        const userId = await user.registerUserSMS(phoneNumber);
+        setOtpUserId(userId);
+        setOtp(false);
+    }
+    const handleSignup = async (e) => {
+        e?.preventDefault();
+        const session = await user.appRegisterOtpSmsValidate(otpUserId, otpText);
+        if (session) {
+            handleClick();
+            handleNameUpdate();
+        }
+        setInvalidOtp(true);
+    }
+
     return (
-        <div className='containerAuth-wrapper'>
-            <div class={`containerAuth ${signToggle ? 'activateLogin' : ''}`} id="containerAuth">
-                <div class="form-containerAuth sign-up">
-                    <form action="#">
-                        <h1>Create an Account</h1>
-                        <div class="social-icons">
-                            <Link><ion-icon name="logo-google"></ion-icon></Link>
+        <>
+            <div className='create-popup-screen' onClick={handleClick}>
+                <div className='containerAuth-wrapper'>
+                    <div class={`containerAuth activateLogin`} id="containerAuth" onClick={(e) => e.stopPropagation()}>
+                        <div class="form-containerAuth sign-up">
+                            <form action="#">
+                                <h1>Login to your account</h1>
+                                <div class="social-icons">
+                                    <Link className='google-logo' onClick={() => user.appGoogleAuth()}>
+                                        <img src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png" alt="google-icon" width={30} height={30} />
+                                        <p>Sign-in with Google</p>
+                                    </Link>
+                                </div>
+                                <span>or use your phone number instead</span>
+                                <div className='containerAuthDiv'>
+                                    <span>+91</span>
+                                    <input type="number" placeholder="Phone number" value={phoneNumber} onChange={handleChange} />
+                                </div>
+                                {otp ? <button onClick={handleOtpClick}>Get OTP</button> :
+                                    <>
+                                        <input type="number" placeholder="Enter OTP" value={otpText} onChange={(e) => setOtpText(e.target.value)} />
+                                        {invalidOtp ? <p style={{ textAlign: 'center', color: 'red' }}>invalid OTP</p> : null}
+                                        <button onClick={handleSignup}>Sign Up</button>
+                                    </>
+                                }
+                            </form>
                         </div>
-                        <span>or use your email for register</span>
-                        <input type="text" placeholder="Full Name" />
-                        <input type="email" placeholder="Email" />
-                        <input type="password" placeholder="Password" />
-                        <button>Sign Up</button>
-                    </form>
-                </div>
+                        <div class="toggle-containerAuth">
+                            <div class="toggle">
 
-                <div class="form-containerAuth sign-in">
-                    <form action="#">
-                        <h1>Sign In</h1>
-                        <div class="social-icons">
-                            <Link><ion-icon name="logo-google"></ion-icon></Link>
-                        </div>
-                        <span>or use your email and password</span>
-                        <input type="email" placeholder="Email" />
-                        <input type="password" placeholder="Password" />
-                        <Link>Forgot Password?</Link>
-                        <button>Sign In</button>
-                    </form>
-                </div>
-
-                <div class="toggle-containerAuth">
-                    <div class="toggle">
-
-                        <div class="toggle-panel toggle-left">
-                            <h1>Welcome Back!</h1>
-                            <p>If you are our exsisting user please sign-in.</p>
-                            <button class="hidden" id="login" onClick={() => setSignToggle(false)}>Sign In</button>
-                        </div>
-
-                        <div class="toggle-panel toggle-right">
-                            <h1>Hello, Are you new to our site?</h1>
-                            <p>Please register to our site to use all of features.</p>
-                            <button class="hidden" id="register" onClick={() => setSignToggle(true)}>Sign Up</button>
+                                <div class="toggle-panel toggle-left">
+                                    <h1>Welcome!</h1>
+                                    <p>Enter in-to your shopping world</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </>
     )
 }
 

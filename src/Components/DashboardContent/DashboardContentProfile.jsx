@@ -1,8 +1,25 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './dashboardContent.css'
+import { useApp } from '../../Context/ContextWrapper';
+import { getUser } from '../../Server';
 
 const DashboardContentProfile = () => {
     const [edit, setEdit] = useState(false);
+    const [userDetails, setUserDetails] = useState(null);
+    const user = useApp();
+
+    const getData = async () => {
+        const data = await getUser(user?.current?.$id);
+        setUserDetails({ ...userDetails, ...data?.documents[0] })
+    }
+
+    useEffect(() => {
+        setUserDetails({
+            ...user?.current
+        });
+        getData();
+    }, []);
+
     return (
         <>
             <div>
@@ -12,52 +29,38 @@ const DashboardContentProfile = () => {
                 </div>
                 <div>
                     <fieldset className='DashboardContent-profile-fieldset'>
-                        <legend className='DashboardContent-profile-legend'>First Name</legend>
+                        <legend className='DashboardContent-profile-legend'>Name</legend>
                         {edit ?
-                            <input type="text" className='DashboardContent-profile-content-input' /> :
-                            <p className='DashboardContent-profile-content-p'>Arifhusain</p>
-                        }
-                    </fieldset>
-                    <fieldset className='DashboardContent-profile-fieldset'>
-                        <legend className='DashboardContent-profile-legend'>Last Name</legend>
-                        {edit ?
-                            <input type="text" className='DashboardContent-profile-content-input' /> :
-                            <p className='DashboardContent-profile-content-p'>Soudagar</p>
+                            <input type="text" className='DashboardContent-profile-content-input' value={user?.current?.name} readOnly /> :
+                            <p className='DashboardContent-profile-content-p'>{user?.current?.name}</p>
                         }
                     </fieldset>
                     <fieldset className='DashboardContent-profile-fieldset'>
                         <legend className='DashboardContent-profile-legend'>Email</legend>
                         {edit ?
-                            <input type="text" className='DashboardContent-profile-content-input' /> :
-                            <p className='DashboardContent-profile-content-p'>arifhusainsoudagar@gmail.com</p>
+                            <input type="text" className='DashboardContent-profile-content-input' value={user?.current?.email} readOnly={user?.current?.email} /> :
+                            <p className='DashboardContent-profile-content-p'>{user?.current?.email}</p>
                         }
                     </fieldset>
                     <fieldset className='DashboardContent-profile-fieldset'>
                         <legend className='DashboardContent-profile-legend'>Contact Number</legend>
                         {edit ?
-                            <input type="text" className='DashboardContent-profile-content-input' /> :
-                            <p className='DashboardContent-profile-content-p'>+91-7358236715</p>
-                        }
-                    </fieldset>
-                    <fieldset className='DashboardContent-profile-fieldset'>
-                        <legend className='DashboardContent-profile-legend'>Alternate Contact Number</legend>
-                        {edit ?
-                            <input type="text" className='DashboardContent-profile-content-input' /> :
-                            <p className='DashboardContent-profile-content-p'>+91-7358236715</p>
+                            <input type="text" className='DashboardContent-profile-content-input' value={user?.current?.phone} readOnly={user?.current?.phone} /> :
+                            <p className='DashboardContent-profile-content-p'>{user?.current?.phone}</p>
                         }
                     </fieldset>
                     <fieldset className='DashboardContent-profile-fieldset'>
                         <legend className='DashboardContent-profile-legend'>Date of birth</legend>
                         {edit ?
-                            <input type="text" className='DashboardContent-profile-content-input' /> :
-                            <p className='DashboardContent-profile-content-p'>-</p>
+                            <input type="text" className='DashboardContent-profile-content-input' value={user?.current?.dob} /> :
+                            <p className='DashboardContent-profile-content-p'>{user?.current?.dob}</p>
                         }
                     </fieldset>
                     <fieldset className='DashboardContent-profile-fieldset'>
                         <legend className='DashboardContent-profile-legend'>Gender</legend>
                         {edit ?
-                            <input type="text" className='DashboardContent-profile-content-input' /> :
-                            <p className='DashboardContent-profile-content-p'>-</p>
+                            <input type="text" className='DashboardContent-profile-content-input' value={user?.current?.gender} /> :
+                            <p className='DashboardContent-profile-content-p'>{user?.current?.gender}</p>
                         }
                     </fieldset>
                     {edit ?
