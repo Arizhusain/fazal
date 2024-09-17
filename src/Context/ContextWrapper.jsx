@@ -41,7 +41,7 @@ const ContextWrapper = ({ children }) => {
     }, []);
 
     return (
-        <AppContext.Provider value={{ current: user, registerUserSMS, appRegisterOtpSmsValidate, appGoogleAuth, appLogout, appUpdateName }} >
+        <AppContext.Provider value={{ current: user, registerUserSMS, appRegisterOtpSmsValidate, appGoogleAuth, appLogout, appUpdateName, init }} >
             {children}
         </AppContext.Provider>
     )

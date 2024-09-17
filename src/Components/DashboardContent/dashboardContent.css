@@ -242,3 +242,23 @@
     display: inline-block;
     width: 100%;
 }
+
+.DashboardContent-profile-content-input-fz {
+    font-size: 1.3rem;
+}
+
+.DashboardContent-profile-phone-wrapper {
+    position: relative;
+}
+
+.DashboardContent-profile-phone-prefix {
+    position: absolute;
+    top: 53%;
+    left: 3%;
+    transform: translate(-50%, -50%);
+    font-size: 1.3rem;
+}
+
+.paddingLeft3 {
+    padding-left: 3rem !important;
+}

@@ -12,8 +12,8 @@ export const registerUserSMS = async (phone) => {
 export const appGoogleAuth = () => {
     account.createOAuth2Session(
         OAuthProvider.Google,
-        'http://localhost:5173',
-        'http://localhost:5173/fail'
+        import.meta.env.VITE_APP_GOOGLE_REDIRECT,
+        import.meta.env.VITE_APP_GOOGLE_REDIRECT_FAIL
     )
 }
 

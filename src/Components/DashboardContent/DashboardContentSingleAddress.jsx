@@ -1,32 +1,53 @@
+import PropTypes from 'prop-types';
 import './dashboardContent.css';
+import { useState } from 'react';
+import AddressEditPopup from '../AddressPopup/AddressEditPopup';
 
-const DashboardContentSingleAddress = () => {
+const DashboardContentSingleAddress = ({ addressItem, onDelete, onUpdate }) => {
+    const address = JSON.parse(addressItem);
+    const [showPopup, setShowPopup] = useState(false);
+
+    const handlePopup = () => {
+        setShowPopup(!showPopup)
+    }
+
+    const handleSubmit = (data) => {
+        handlePopup();
+        onUpdate(data);
+    }
     return (
         <>
             <div className='DashboardContentAddress-address-main-container'>
                 <div className='DashboardContentAddress-left'>
-                    <span>DEFAULT ADDRESS</span>
+                    {address.isDefault ? <span>DEFAULT ADDRESS</span> : null}
                     <div className='DashboardContentAddress-top-head'>
-                        <h4>Arifhusain Soudagar</h4>
-                        <span>HOME</span>
+                        <h4>{address.firstName} {address.lastName}</h4>
+                        <span>{address.addressType}</span>
                     </div>
                     <address className='DashboardContentAddress-top-address'>
-                        501 al barakha, kollikeri dharwad, near charantimath garden, Dharwad Karnataka - 580001
+                        {address.address1} {address.address2} {address.city} {address.state} - {address.postCode}
                     </address>
-                    <h4 className='DashboardContentAddress-top-mobile'>Mobile : +91 7358236715</h4>
+                    <h4 className='DashboardContentAddress-top-mobile'>Mobile : +91 {address.contactNo}</h4>
                 </div>
                 <div className='DashboardContentAddress-right'>
-                    <button>
+                    <button onClick={handlePopup}>
                         <span>EDIT</span>
                     </button>
                     |
-                    <button>
+                    <button onClick={() => onDelete(address.id)}>
                         <span>DELETE</span>
                     </button>
                 </div>
-            </div>
+            </div >
+            {showPopup ? <AddressEditPopup handleClose={handlePopup} onSubmit={handleSubmit} address={address}/> : null}
         </>
     )
 }
+
+DashboardContentSingleAddress.propTypes = {
+    addressItem: PropTypes.object,
+    onDelete: PropTypes.func,
+    onUpdate: PropTypes.func
+};
 
 export default DashboardContentSingleAddress

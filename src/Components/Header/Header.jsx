@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import './header.css';
 import SearchInput from '../SearchInput/SearchInput'
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import ClickAwayListener from '../ClickAwayListener/ClickAwayListener';
 import SignIn from '../AuthComponent/SignIn';
 import NameComponent from '../AuthComponent/NameComponent';
@@ -9,6 +9,7 @@ import { useApp } from '../../Context';
 
 const Header = () => {
     const user = useApp();
+    const navigate = useNavigate();
     const [popup, setPopup] = useState(false);
     const [loginScreen, setLoginScreen] = useState(false);
     const [showNameComponent, setShowNameComponent] = useState(false);
@@ -40,9 +41,10 @@ const Header = () => {
         setShowNameComponent(false);
     }
 
-    useEffect(() => {
-        console.log(user?.current);
-    }, [user?.current]);
+    const handleProfileNavigate = (e) => {
+        handleProfilePopup(e);
+        navigate('/profile');
+    }
 
     return (
         <>
@@ -72,7 +74,7 @@ const Header = () => {
                                                 !user?.current ? <li><Link className='header-profile-action-link' onClick={handleClick}>Login</Link></li>
                                                     :
                                                     <>
-                                                        <li><Link className='header-profile-action-link' to={'/profile'}>Profile</Link></li>
+                                                        <li><Link className='header-profile-action-link' onClick={handleProfileNavigate}>Profile</Link></li>
                                                         <li><Link className='header-profile-action-link' onClick={handleLogout}>Logout</Link></li>
                                                     </>
                                             }
