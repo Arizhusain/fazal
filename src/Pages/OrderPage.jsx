@@ -1,4 +1,3 @@
-import React from 'react'
 import ShippingMessage from '../Components/ShippingMessage/ShippingMessage'
 import CartSummary from '../Components/CartSummary/CartSummary'
 import Features from '../Components/Features/Features'

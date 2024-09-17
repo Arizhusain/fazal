@@ -1,4 +1,3 @@
-import React from 'react'
 import './breadCrumb.css'
 
 const BreadCrumb = () => {

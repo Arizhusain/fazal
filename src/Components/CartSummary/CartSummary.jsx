@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import PropTypes from 'prop-types';
 import ShopingTotalCount from '../ShopingTotalCount/ShopingTotalCount'
 import './cartSummary.css';
 import CartCardComponent from '../CartCardComponent/CartCardComponent';
@@ -7,7 +8,7 @@ import AddressCard from '../AddressCard/AddressCard';
 
 const CartSummary = ({ cartHandling }) => {
     const [enableCheckoutOption, setEnableCheckoutOption] = useState(false);
-    const handlePaymentOptionSelect = (e) => {
+    const handlePaymentOptionSelect = () => {
         setEnableCheckoutOption(true);
     }
     return (
@@ -40,5 +41,9 @@ const CartSummary = ({ cartHandling }) => {
         </>
     )
 }
+
+CartSummary.propTypes = {
+    cartHandling: PropTypes.bool
+};
 
 export default CartSummary

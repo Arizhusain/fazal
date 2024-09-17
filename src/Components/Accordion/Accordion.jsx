@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import PropTypes from 'prop-types';
 import './accordion.css';
 
 const Accordion = ({ item }) => {
@@ -7,7 +8,7 @@ const Accordion = ({ item }) => {
         <>
             <div className='siderbar-body'>
                 <div>
-                    <button className='siderbar-body-container' onClick={(e) => setShow(!show)}>
+                    <button className='siderbar-body-container' onClick={() => setShow(!show)}>
                         <h3 className='category-heading'>{item.categoryName}</h3>
                         <ion-icon name="chevron-down-outline"></ion-icon>
                     </button>
@@ -15,8 +16,8 @@ const Accordion = ({ item }) => {
                 <div className='siderbar-body-wrapper' style={{ display: (show) ? 'block' : 'none' }}>
                     <ul className='siderbar-list'>
                         {
-                            item.categoryItems.map((catItem) => (
-                                <li className='siderbar-list-item'><a href="#1">{catItem}</a></li>
+                            item.categoryItems.map((catItem, index) => (
+                                <li key={index} className='siderbar-list-item'><a href="#1">{catItem}</a></li>
                             ))
                         }
                     </ul>
@@ -25,5 +26,9 @@ const Accordion = ({ item }) => {
         </>
     )
 }
+
+Accordion.propTypes = {
+    item: PropTypes.any
+};
 
 export default Accordion

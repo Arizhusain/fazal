@@ -1,4 +1,3 @@
-import React from 'react'
 import './dealComponent.css'
 
 const DealComponent = () => {

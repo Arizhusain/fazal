@@ -1,4 +1,3 @@
-import React from 'react'
 import Features from '../Components/Features/Features'
 import NewsLetter from '../Components/NewsLetter/NewsLetter'
 import OrderViewComponent from '../Components/OrderViewComponent/OrderViewComponent'

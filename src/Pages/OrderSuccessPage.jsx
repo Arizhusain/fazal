@@ -1,4 +1,3 @@
-import React from 'react';
 import OrderSuccessComponent from '../Components/OrderSuccessComponent/OrderSuccessComponent';
 import NewsLetter from '../Components/NewsLetter/NewsLetter';
 

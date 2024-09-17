@@ -1,4 +1,4 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 import './orderSummaryCard.css'
 import { Link } from 'react-router-dom';
 
@@ -19,5 +19,9 @@ const OrderSummaryCard = ({ id }) => {
     </>
   )
 }
+
+OrderSummaryCard.propTypes = {
+  id: PropTypes.string
+};
 
 export default OrderSummaryCard

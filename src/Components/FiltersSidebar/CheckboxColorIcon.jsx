@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import PropTypes from 'prop-types';
+import { useState } from 'react'
 
 const CheckboxColorIcon = ({ item }) => {
     const [select, setSelect] = useState(false);
@@ -14,5 +15,9 @@ const CheckboxColorIcon = ({ item }) => {
         </>
     )
 }
+
+CheckboxColorIcon.propTypes = {
+    item: PropTypes.string
+};
 
 export default CheckboxColorIcon

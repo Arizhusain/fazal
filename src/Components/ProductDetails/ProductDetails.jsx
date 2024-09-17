@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import './productDetails.css'
 import CheckboxColorIcon from '../FiltersSidebar/CheckboxColorIcon'
 import SizeBox from './SizeBox'
@@ -34,8 +34,8 @@ const ProductDetails = () => {
                             <div className='productDetails-header-label'>More Colors</div>
                             <ul className='productDetails-header-colors'>
                                 {
-                                    colors.map((item) => (
-                                        <CheckboxColorIcon item={item} />
+                                    colors.map((item, index) => (
+                                        <CheckboxColorIcon key={index} item={item} />
                                     ))
                                 }
                             </ul>
@@ -44,8 +44,8 @@ const ProductDetails = () => {
                             <div className='productDetails-header-label'>Select Size</div>
                             <ul className='productDetails-header-colors'>
                                 {
-                                    sizes.map((item) => (
-                                        <SizeBox item={item} size={size} onSizeSelect={handleClick} />
+                                    sizes.map((item, index) => (
+                                        <SizeBox key={index} item={item} size={size} onSizeSelect={handleClick} />
                                     ))
                                 }
                             </ul>

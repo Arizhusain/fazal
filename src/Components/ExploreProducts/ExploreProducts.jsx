@@ -1,4 +1,3 @@
-import React from 'react';
 import './exploreProducts.css';
 import SingleCategoryProduct from './SingleCategoryProduct';
 import { exploreProductsData } from '../../demo';

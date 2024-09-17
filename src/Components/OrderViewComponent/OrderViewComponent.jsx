@@ -1,4 +1,3 @@
-import React from 'react';
 import './orderViewComponent.css'
 import OrderSummaryCard from '../OrderSummaryCard/OrderSummaryCard';
 import TrackingComponent from '../TrackingComponent/TrackingComponent';

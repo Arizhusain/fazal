@@ -1,4 +1,4 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 import './pages.css';
 import DashboardLinks from '../Components/DashboardLinks/DashboardLinks'
 import DashboardContentProfile from '../Components/DashboardContent/DashboardContentProfile';
@@ -40,5 +40,9 @@ const Dashboard = ({ pageType }) => {
         </>
     )
 }
+
+Dashboard.propTypes = {
+    pageType: PropTypes.string
+};
 
 export default Dashboard

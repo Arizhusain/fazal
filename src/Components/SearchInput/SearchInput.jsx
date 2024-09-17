@@ -1,12 +1,11 @@
-import React from 'react'
 import './searchInput.css'
 
 const SearchInput = () => {
     return (
-        <div class="search-container">
-            <div class="search-box">
-                <form action="" class="search-form">
-                    <input className='search-input' type="text" placeholder="Search" id="search" autocomplete="off" />
+        <div className="search-container">
+            <div className="search-box">
+                <form action="" className="search-form">
+                    <input className='search-input' type="text" placeholder="Search" id="search" autoComplete="off" />
                 </form>
                 <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
             </div>

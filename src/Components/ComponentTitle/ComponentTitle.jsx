@@ -1,4 +1,4 @@
-import React from 'react'
+import PropTypes from 'prop-types';
 import './componentTitle.css'
 
 const ComponentTitle = ({ title, subTitle }) => {
@@ -16,5 +16,10 @@ const ComponentTitle = ({ title, subTitle }) => {
         </>
     )
 }
+
+ComponentTitle.propTypes = {
+    title: PropTypes.string,
+    subTitle: PropTypes.string
+};
 
 export default ComponentTitle

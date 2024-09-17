@@ -1,4 +1,3 @@
-import React from 'react';
 import './shoppingList.css';
 import FiltersSidebar from '../FiltersSidebar/FiltersSidebar';
 import ProductCard from '../ProductCard/ProductCard';
@@ -13,7 +12,7 @@ const ShoppingList = () => {
                             <FiltersSidebar />
                         </div>
                         <div className='shopping-list-products'>
-                            <ul class="product-list">
+                            <ul className="product-list">
                                 <ProductCard />
                                 <ProductCard />
                                 <ProductCard />

@@ -1,4 +1,5 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
+import PropTypes from 'prop-types';
 
 function ClickAwayListener({ children, onClickAway }) {
     const ref = useRef(null);
@@ -18,5 +19,10 @@ function ClickAwayListener({ children, onClickAway }) {
 
     return <div ref={ref}>{children}</div>;
 }
+
+ClickAwayListener.propTypes = {
+    children: PropTypes.any,
+    onClickAway: PropTypes.func
+};
 
 export default ClickAwayListener;

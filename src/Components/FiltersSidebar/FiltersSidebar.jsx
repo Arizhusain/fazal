@@ -1,4 +1,3 @@
-import React from 'react'
 import './filtersSidebar.css'
 import FilterCategories from './FilterCategories'
 import FilterPrice from './FilterPrice'

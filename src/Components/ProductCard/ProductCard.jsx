@@ -1,4 +1,3 @@
-import React from 'react'
 import './productCard.css'
 import { Link } from 'react-router-dom'
 
@@ -12,7 +11,7 @@ const ProductCard = () => {
             <span className='new-button'>New</span>
             <div className='product-data'>
               <h2>Sky Blue and White</h2>
-              <data class="card-price" value="190.85">$190.85</data>
+              <data className="card-price" value="190.85">$190.85</data>
             </div>
           </div>
         </Link>

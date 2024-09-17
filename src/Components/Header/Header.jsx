@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import './header.css';
 import SearchInput from '../SearchInput/SearchInput'
 import { Link, NavLink } from 'react-router-dom';
@@ -57,12 +57,12 @@ const Header = () => {
                             <Link className='nav-item' to={'/products'}>T-Shirts</Link>
                             <Link className='nav-item' to={'/myorders'}>Orders</Link>
                         </ul>
-                        <ul class="nav-action-list">
+                        <ul className="nav-action-list">
                             <li>
                                 <SearchInput />
                             </li>
                             <li>
-                                <button class="nav-action-btn" onClick={handleProfilePopup}>
+                                <button className="nav-action-btn" onClick={handleProfilePopup}>
                                     <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
                                 </button>
                                 {popup ?
@@ -81,17 +81,17 @@ const Header = () => {
                             </li>
                             <li>
                                 <Link to={'/wishlist'}>
-                                    <button class="nav-action-btn">
+                                    <button className="nav-action-btn">
                                         <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
-                                        <data class="nav-action-badge" value="5" aria-hidden="true">5</data>
+                                        <data className="nav-action-badge" value="5" aria-hidden="true">5</data>
                                     </button>
                                 </Link>
                             </li>
                             <li>
                                 <Link to={'/cart'}>
-                                    <button class="nav-action-btn">
+                                    <button className="nav-action-btn">
                                         <ion-icon name="bag-outline" aria-hidden="true"></ion-icon>
-                                        <data class="nav-action-badge" value="4" aria-hidden="true">4</data>
+                                        <data className="nav-action-badge" value="4" aria-hidden="true">4</data>
                                     </button>
                                 </Link>
                             </li>

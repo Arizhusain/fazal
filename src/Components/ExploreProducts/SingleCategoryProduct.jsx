@@ -1,4 +1,4 @@
-import React from 'react'
+import PropTypes from 'prop-types';
 
 const SingleCategoryProduct = ({ image, title }) => {
     return (
@@ -12,5 +12,10 @@ const SingleCategoryProduct = ({ image, title }) => {
         </>
     )
 }
+
+SingleCategoryProduct.propTypes = {
+    image: PropTypes.string,
+    title: PropTypes.string
+};
 
 export default SingleCategoryProduct

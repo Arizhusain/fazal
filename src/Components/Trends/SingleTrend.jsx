@@ -1,4 +1,4 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 
 const SingleTrend = ({ image, title, subTitle }) => {
     return (
@@ -12,5 +12,11 @@ const SingleTrend = ({ image, title, subTitle }) => {
         </>
     )
 }
+
+SingleTrend.propTypes = {
+    image: PropTypes.string,
+    title: PropTypes.string,
+    subTitle: PropTypes.string
+};
 
 export default SingleTrend;

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './hero.css';
 import { corosalImage } from '../../demo';
 
@@ -30,7 +30,7 @@ const Hero = () => {
                 <div className="slideshow-container">
                     {
                         corosalImage.map((item, index) => (
-                            <div className="slide-image" style={{ display: (screenNumber === index) ? 'block' : 'none' }}>
+                            <div key={index} className="slide-image" style={{ display: (screenNumber === index) ? 'block' : 'none' }}>
                                 <img className='hero-slider-image' src={item} alt="hero" />
                             </div>
                         ))
@@ -40,7 +40,7 @@ const Hero = () => {
                     <div className='dot-container'>
                         {
                             corosalImage.map((item, index) => (
-                                <span className="dot" style={{ backgroundColor: (screenNumber === index) ? 'black': '#bbb'}} onClick={(e) => handleImageSelection(e, index)}></span>
+                                <span key={index} className="dot" style={{ backgroundColor: (screenNumber === index) ? 'black' : '#bbb' }} onClick={(e) => handleImageSelection(e, index)}></span>
                             ))
 
                         }

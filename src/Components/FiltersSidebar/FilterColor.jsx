@@ -1,4 +1,3 @@
-import React from 'react'
 import CategoryHeading from '../CategoryHeading/CategoryHeading'
 import CheckboxColorIcon from './CheckboxColorIcon'
 import { colors } from '../../demo'
@@ -11,8 +10,8 @@ const FilterColor = () => {
             <div>
                 <ul className='color-container'>
                     {
-                        colors.map((item) => (
-                            <CheckboxColorIcon item={item} />
+                        colors.map((item, index) => (
+                            <CheckboxColorIcon key={index} item={item} />
                         ))
                     }
                 </ul>

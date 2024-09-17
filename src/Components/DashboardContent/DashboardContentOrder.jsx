@@ -1,4 +1,3 @@
-import React from 'react';
 import './dashboardContent.css';
 import { Link } from 'react-router-dom';
 import OrderSummaryCard from '../OrderSummaryCard/OrderSummaryCard';

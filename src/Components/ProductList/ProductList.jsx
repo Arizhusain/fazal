@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import './productList.css'
 import ProductCard from '../ProductCard/ProductCard'
 import { filterCtaButtons } from '../../demo'
@@ -11,16 +11,16 @@ const ProductList = () => {
             <div className='margin-top margin-bottom'>
                 <section className='container'>
                     <div>
-                        <ul class="filter-list">
+                        <ul className="filter-list">
                             {
                                 filterCtaButtons.map((item, index) => (
-                                    <li>
+                                    <li key={index}>
                                         <button className={`filter-btn ${index === selectCTA ? 'active' : ''}`} onClick={() => setSelectCTA(index)}>{item}</button>
                                     </li>
                                 ))
                             }
                         </ul>
-                        <ul class="product-list">
+                        <ul className="product-list">
                             <ProductCard />
                             <ProductCard />
                             <ProductCard />

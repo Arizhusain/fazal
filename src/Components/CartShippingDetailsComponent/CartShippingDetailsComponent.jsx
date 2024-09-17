@@ -1,6 +1,6 @@
-import React from 'react';
-import './cartShippingDetailsComponent.css'
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import './cartShippingDetailsComponent.css'
 
 const CartShippingDetailsComponent = ({ cartHandling, enableCheckoutOption }) => {
     return (
@@ -55,5 +55,10 @@ const CartShippingDetailsComponent = ({ cartHandling, enableCheckoutOption }) =>
         </>
     )
 }
+
+CartShippingDetailsComponent.propTypes = {
+    cartHandling: PropTypes.bool, 
+    enableCheckoutOption: PropTypes.bool
+};
 
 export default CartShippingDetailsComponent

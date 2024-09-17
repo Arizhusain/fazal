@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import PropTypes from 'prop-types';
 
 const SizeBox = ({ item, size, onSizeSelect }) => {
     return (
@@ -13,5 +13,11 @@ const SizeBox = ({ item, size, onSizeSelect }) => {
         </>
     )
 }
+
+SizeBox.propTypes = {
+    item: PropTypes.any,
+    size: PropTypes.string,
+    onSizeSelect: PropTypes.func
+};
 
 export default SizeBox

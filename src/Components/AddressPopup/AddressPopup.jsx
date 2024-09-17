@@ -1,4 +1,5 @@
-import React, { useContext, useEffect } from 'react';
+import { useContext, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import './addressPopup.css';
 import { AppContext } from '../../Context';
 
@@ -59,16 +60,16 @@ const AddressPopup = ({ handleClose }) => {
                             <div className='addressPopup-action-radio-btn addressPopup-margin-bottom'>
                                 <label>
                                     <input type="radio" name="addressType" value="home" required />
-                                    <span class="filter-input">Home</span>
+                                    <span className="filter-input">Home</span>
                                 </label>
                                 <label>
                                     <input type="radio" name="addressType" value="office" required />
-                                    <span class="filter-input">Office/Commercial</span>
+                                    <span className="filter-input">Office/Commercial</span>
                                 </label>
                             </div>
                             <span className='addressPopup-margin-bottom'>
                                 <input type="checkbox" id="isDefault" name="isDefault" value="true" />
-                                <label htmlFor="isDefault" class="filter-input">Make this my default address</label>
+                                <label htmlFor="isDefault" className="filter-input">Make this my default address</label>
                             </span>
                             <div className='addressPopup-action-btn'>
                                 <button className='addressPopup-submit-btn'>Submit</button>
@@ -81,5 +82,9 @@ const AddressPopup = ({ handleClose }) => {
         </>
     )
 }
+
+AddressPopup.propTypes = {
+    handleClose: PropTypes.func
+};
 
 export default AddressPopup

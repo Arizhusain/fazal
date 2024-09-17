@@ -1,4 +1,4 @@
-import React from 'react'
+import PropTypes from 'prop-types';
 import './categoryHeading.css'
 
 const CategoryHeading = ({ categoryHeading }) => {
@@ -12,5 +12,10 @@ const CategoryHeading = ({ categoryHeading }) => {
         </>
     )
 }
+
+
+CategoryHeading.propTypes = {
+    categoryHeading: PropTypes.string
+};
 
 export default CategoryHeading

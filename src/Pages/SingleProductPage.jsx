@@ -1,4 +1,3 @@
-import React from 'react'
 import ProductDetails from '../Components/ProductDetails/ProductDetails'
 import NewsLetter from '../Components/NewsLetter/NewsLetter'
 import Features from '../Components/Features/Features'

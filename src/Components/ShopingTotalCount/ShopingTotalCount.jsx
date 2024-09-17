@@ -1,4 +1,3 @@
-import React from 'react';
 import './shopingTotalCount.css';
 
 const ShopingTotalCount = () => {

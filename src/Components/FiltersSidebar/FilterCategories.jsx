@@ -1,4 +1,3 @@
-import React from 'react'
 import CategoryHeading from '../CategoryHeading/CategoryHeading'
 import Accordion from '../Accordion/Accordion'
 import { categoryList } from '../../demo'
@@ -10,7 +9,7 @@ const FilterCategories = () => {
             <div className='sidebar-container'>
                 {
                     categoryList.map((item, index) => (
-                        <Accordion item={item} />
+                        <Accordion key={index} item={item} />
                     ))
                 }
             </div>

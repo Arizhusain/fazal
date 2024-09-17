@@ -1,4 +1,3 @@
-import React from 'react';
 import './dashboardContent.css';
 import DashboardContentSingleAddress from './DashboardContentSingleAddress';
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 import './paymentComponent.css'
 
 const PaymentComponent = ({ enableCheckoutOption, handlePaymentOptionSelect }) => {
@@ -13,5 +13,10 @@ const PaymentComponent = ({ enableCheckoutOption, handlePaymentOptionSelect }) =
         </>
     )
 }
+
+PaymentComponent.propTypes = {
+    enableCheckoutOption: PropTypes.bool,
+    handlePaymentOptionSelect: PropTypes.func
+};
 
 export default PaymentComponent

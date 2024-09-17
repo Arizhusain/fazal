@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 import './auth.css';
 import { useApp } from '../../Context';
 
@@ -27,5 +28,9 @@ const NameComponent = ({ handleNameComponentClose }) => {
         </>
     )
 }
+
+NameComponent.propTypes = {
+    handleNameComponentClose: PropTypes.func
+};
 
 export default NameComponent

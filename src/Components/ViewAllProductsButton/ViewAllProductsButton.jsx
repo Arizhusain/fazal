@@ -1,4 +1,3 @@
-import React from 'react'
 import './viewAllProductsButton.css'
 import { VIEW_ALL_PRODUCTS } from '../../constants'
 

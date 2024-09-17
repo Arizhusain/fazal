@@ -1,4 +1,5 @@
-import React, { useContext, useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 import './addressCard.css';
 import AddressPopup from '../AddressPopup/AddressPopup';
 import { AppContext } from '../../Context';
@@ -49,8 +50,8 @@ const AddressCard = ({ enableCheckoutOption, handlePaymentOptionSelect }) => {
                         data?.addressData?.length ?
                             <span>
                                 {
-                                    data?.addressData?.map((item) => (
-                                        <label className='addressCard-adrressSelection'>
+                                    data?.addressData?.map((item, index) => (
+                                        <label key={index} className='addressCard-adrressSelection'>
                                             <input type="radio" name="addressSelection" id="addressSelection" onChange={handleAddressChange} />
                                             <div>
                                                 <h1>{item.firstName} {item.lastName}</h1>
@@ -94,5 +95,9 @@ const AddressCard = ({ enableCheckoutOption, handlePaymentOptionSelect }) => {
         </>
     )
 }
+AddressCard.propTypes = {
+    enableCheckoutOption: PropTypes.bool,
+    handlePaymentOptionSelect: PropTypes.func,
+};
 
 export default AddressCard

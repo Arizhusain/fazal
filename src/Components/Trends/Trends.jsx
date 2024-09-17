@@ -1,4 +1,3 @@
-import React from 'react';
 import './trends.css';
 import SingleTrend from './SingleTrend';
 import { trendsProductsData } from '../../demo';

@@ -1,4 +1,3 @@
-import React from 'react'
 import Hero from '../Components/Hero/Hero'
 import ComponentTitle from '../Components/ComponentTitle/ComponentTitle'
 import ExploreProducts from '../Components/ExploreProducts/ExploreProducts'
