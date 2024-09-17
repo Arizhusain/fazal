@@ -10,6 +10,7 @@ export const registerUserSMS = async (phone) => {
 }
 
 export const appGoogleAuth = () => {
+    console.log(import.meta.env.VITE_APP_GOOGLE_REDIRECT);
     account.createOAuth2Session(
         OAuthProvider.Google,
         import.meta.env.VITE_APP_GOOGLE_REDIRECT,
