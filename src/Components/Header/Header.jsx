@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './header.css';
 import SearchInput from '../SearchInput/SearchInput'
 import { Link, NavLink, useNavigate } from 'react-router-dom';
@@ -45,6 +45,12 @@ const Header = () => {
         handleProfilePopup(e);
         navigate('/profile');
     }
+
+    useEffect(() => {
+        if (user?.current?.name === "") {
+            handleNameUpdate();
+        }
+    }, [user])
 
     return (
         <>
@@ -102,8 +108,8 @@ const Header = () => {
                     </nav>
                 </section>
             </header>
-            {loginScreen ? <SignIn handleClick={handleClick} handleNameUpdate={handleNameUpdate} /> : null}
-            {showNameComponent ? <NameComponent handleNameComponentClose={handleNameComponentClose}/> : null}
+            {loginScreen ? <SignIn handleClick={handleClick} /> : null}
+            {showNameComponent ? <NameComponent handleNameComponentClose={handleNameComponentClose} /> : null}
         </>
     )
 }

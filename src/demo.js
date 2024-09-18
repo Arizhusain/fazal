@@ -64,3 +64,60 @@ export const sizes = ['xxs',
     'ml',
     'l',
     'xl']
+
+
+export const orders = {
+    "orders": [
+        {
+            "orderId": 1,
+            "customer": {
+                "customerId": 123,
+                "name": "John Doe",
+                "email": "john.doe@example.com",
+                "phone": "123-456-7890"
+            },
+            "items": [
+                {
+                    "productId": 1,
+                    "name": "Product 1",
+                    "quantity": 2,
+                    "color": "red",
+                    "size": "L",
+                    "price": 29.99,
+                    "total": 59.98
+                },
+                {
+                    "productId": 2,
+                    "name": "Product 2",
+                    "quantity": 1,
+                    "color": "blue",
+                    "size": "S",
+                    "price": 39.99,
+                    "total": 39.99
+                }
+            ],
+            "orderSummary": {
+                "subtotal": 99.97,
+                "tax": 9.99,
+                "discount": 5.00,
+                "total": 104.96
+            },
+            "shipping": {
+                "address": "123 Main St",
+                "city": "Anytown",
+                "state": "CA",
+                "postalCode": "12345",
+                "country": "USA"
+            },
+            "payment": {
+                "paymentMethod": "Credit Card",
+                "paymentStatus": "Completed"
+            },
+            "status": "Processing",
+            "timestamps": {
+                "createdAt": "2024-09-17T17:30:00Z",
+                "updatedAt": "2024-09-17T18:00:00Z"
+            }
+        }
+    ]
+}

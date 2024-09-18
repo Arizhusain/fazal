@@ -4,7 +4,7 @@ import './auth.css';
 import { Link } from 'react-router-dom';
 import { useApp } from '../../Context';
 
-const SignIn = ({ handleClick, handleNameUpdate }) => {
+const SignIn = ({ handleClick }) => {
     const user = useApp();
     const [otp, setOtp] = useState(true);
     const [phoneNumber, setPhoneNumber] = useState(null);
@@ -29,7 +29,7 @@ const SignIn = ({ handleClick, handleNameUpdate }) => {
         const session = await user.appRegisterOtpSmsValidate(otpUserId, otpText);
         if (session) {
             handleClick();
-            handleNameUpdate();
+            await user.init();
         }
         setInvalidOtp(true);
     }
@@ -79,8 +79,7 @@ const SignIn = ({ handleClick, handleNameUpdate }) => {
 }
 
 SignIn.propTypes = {
-    handleClick: PropTypes.func,
-    handleNameUpdate: PropTypes.func,
+    handleClick: PropTypes.func
 };
 
 export default SignIn
