@@ -35,3 +35,32 @@
     margin: 0;
     padding: 0;
 }
+
+.singleTrendWidth {
+    width: 100%;
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 1280px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 992px) {
+    .singleTrendWidth {
+        width: 70%;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 768px) {
+    .new-trends {
+        flex-wrap: wrap;
+    }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .new-trends {
+        flex-wrap: wrap;
+    }
+}

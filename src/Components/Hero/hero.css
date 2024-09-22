@@ -10,16 +10,16 @@
     align-items: center;
     justify-content: center;
     opacity: .5;
+    background-color: rgb(255 255 255 / 64%);
+    border-radius: 50%;
 }
 
 .arrow-button>ion-icon {
-    color: #717171;
-    opacity: .5;
+    color: rgb(0, 0, 0);
 }
 
 .arrow-button:hover {
     background-color: rgb(131 131 131 / 39%);
-    border-radius: 50%;
     transition: 0.1s ease;
     opacity: 1;
 }
@@ -63,6 +63,36 @@
     background-color: #717171;
 }
 
-.slide-image{
+.slide-image {
     transition: 0.1s ease;
+}
+
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 1280px) {
+    .hero-slider-image {
+        height: 45vh;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 992px) {
+    .hero-slider-image {
+        height: 40vh;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 768px) {
+    .hero-slider-image {
+        height: 30vh;
+    }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .hero-slider-image {
+        object-fit: fill;
+    }
 }

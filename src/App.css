@@ -70,6 +70,11 @@ ion-icon {
     max-width: 1150px;
   }
 }
+@media (min-width: 1300px) {
+  .container {
+    max-width: 1350px;
+  }
+}
 
 
 .margin-top {

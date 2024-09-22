@@ -11,3 +11,18 @@
     border: none;
     outline: none;
 }
+
+.search-container-button {
+    display: none;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 900px) {
+    .search-box {
+        display: none;
+    }
+
+    .search-container-button {
+        display: block;
+    }
+}

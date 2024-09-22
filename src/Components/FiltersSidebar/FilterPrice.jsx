@@ -62,7 +62,7 @@ const FilterPrice = () => {
                     <span className='price-label'>Min</span>
                     <input type="number" className="input-min" value={value.min} onChange={handleMinInputChange} onBlur={handleMinBlur} />
                 </div>
-                <div className="separator">-</div>
+                <div className="separator"></div>
                 <div className="field">
                     <span className='price-label'>Max</span>
                     <input type="number" className="input-max" value={value.max} onChange={handleMaxInputChange} onBlur={handleMaxBlur} />

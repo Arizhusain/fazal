@@ -39,7 +39,25 @@
     color: coral;
 }
 
-.flex1 p, .flex1 a {
+.flex1 p,
+.flex1 a {
     font-size: 1.3rem;
     margin: .5rem .5rem 2rem .5rem;
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 992px) {
+    .flex1 ul {
+        height: auto;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 768px) {
+    .footer-wrapper {
+        flex-direction: column;
+        padding: 0 2rem;
+    }
+
+
 }

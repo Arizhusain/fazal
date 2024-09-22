@@ -2,15 +2,37 @@
     display: flex;
     flex-wrap: wrap;
     max-width: 100%;
-    gap: 3rem;
 }
 
 .shopping-list-filter {
-    flex: 0 0 24%;
-    max-width: 24%;
+    flex: 0 0 19%;
+    max-width: 19%;
+    padding: 5px;
 }
 
 .shopping-list-products {
-    flex: 0 0 72%;
-    max-width: 72%;
+    flex: 0 0 79%;
+    max-width: 79%;
 }
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 1280px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 992px) {}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 768px) {
+    .shopping-list-filter {
+        display: none;
+    }
+
+    .shopping-list-products {
+        flex: 1;
+        max-width: 100%;
+    }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {}

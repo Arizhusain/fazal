@@ -28,3 +28,14 @@
     padding: 0;
     margin: 0;
 }
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 768px) {
+    .feature-card-wrapper {
+        flex-wrap: wrap;
+    }
+
+    .feature-card {
+        width: 300px;
+    }
+}
